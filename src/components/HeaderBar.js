@@ -4,15 +4,11 @@ import {
     Route,
     Link
   } from 'react-router-dom';
-import Home from './../containers/Home.js';
-import AboutUs from './../containers/AboutUs';
-
-
 
  const HeaderBar = function(props)
     {
         return (
-            <Router>
+            
             <div>
         {/* Header */}
         <header className="header">
@@ -34,7 +30,7 @@ import AboutUs from './../containers/AboutUs';
                       <li className="main_nav_item active"><Link to="/">Home</Link></li>
                       <li className="main_nav_item"><Link to="/About">About us</Link></li>
                       <li className="main_nav_item"><a href="offers.html">Curency</a></li>
-                      <li className="main_nav_item"><a href="news.html">News</a></li>
+                      <li className="main_nav_item"><Link to="Country">Country</Link></li>
                       <li className="main_nav_item"><a href="contact.html">Contact</a></li>
                     </ul>
                   </nav>
@@ -89,9 +85,7 @@ import AboutUs from './../containers/AboutUs';
           </div>
         </div>
       </div>
-      <Route exact path="/" component={Home} />
-        <Route path="/About" component={AboutUs} />
-      </Router>
+     
   );
 
 }
