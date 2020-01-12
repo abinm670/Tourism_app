@@ -5,10 +5,12 @@ import Home from './containers/Home.js';
 import AboutUs from './containers/AboutUs';
 import FooterBar from './components/FooterBar.js';
 import Country from './containers/Country.js';
+import Currency from './containers/Currency.js';
+
 import {
   BrowserRouter as Router,
   Route,
-  Link
+
 } from 'react-router-dom';
 
 
@@ -23,6 +25,7 @@ function App() {
 <Route exact path="/" component={Home} />
 <Route path="/About" component={AboutUs} />
 <Route path="/Country" component={Country} />
+<Route path="/Currency" component={Currency} />
 
 
 <FooterBar />

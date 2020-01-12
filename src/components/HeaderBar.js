@@ -29,7 +29,7 @@ import {
                     <ul className="main_nav_list">
                       <li className="main_nav_item active"><Link to="/">Home</Link></li>
                       <li className="main_nav_item"><Link to="/About">About us</Link></li>
-                      <li className="main_nav_item"><a href="offers.html">Curency</a></li>
+                      <li className="main_nav_item"><Link to="/Currency">Curency</Link></li>
                       <li className="main_nav_item"><Link to="Country">Country</Link></li>
                       <li className="main_nav_item"><a href="contact.html">Contact</a></li>
                     </ul>
