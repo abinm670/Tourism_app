@@ -9,10 +9,11 @@ export default class City extends React.Component {
     alpha: this.props.alphaCode,
     cities: [],
     citiesId:"",
+    
   }
     }
   componentDidMount() {
-    const axios = require("axios");
+    // const axios = require("axios");
 
 axios({
     "method":"GET",
@@ -80,13 +81,14 @@ axios({
 }
 
   render() {
-    
+    console.log(this.state.id)
     return (
     <div>
     <br></br>
         <ul>
-        { this.state.cities.map(city => <li>{city.name}</li>)}
+        {/* { this.state.cities.map(city => <li>{city.name}</li>)} */}
         {/* { this.state.citiesId.map(city => <li>{city.name}</li>)} */}
+        {this.state.id}
       </ul>
       {/* <ul>
         { this.state.linkCity.map(link => <li>{link.href}</li>)}

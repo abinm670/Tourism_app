@@ -32,6 +32,9 @@ const HeaderBar = function (props) {
                     <li className="main_nav_item"><Link to="/Currency">Curency</Link></li>
                     <li className="main_nav_item"><Link to="/Country">Country</Link></li>
                     <li className="main_nav_item"><Link to="/ContactUs">Contact us</Link></li>
+                    <li className="main_nav_item"><Link to="/City_info">City info</Link></li>
+
+
                   </ul>
                 </nav>
                 {/* Search */}
