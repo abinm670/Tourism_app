@@ -1,6 +1,7 @@
 import React from 'react';
 import Time from './Time'
 import axios from 'axios';
+import GetCityInfo from'./GetCityInfo';
 import Resturant from './Resturant'
 import {
     BrowserRouter as Router,
@@ -17,7 +18,7 @@ export default class City extends React.Component {
     alpha: this.props.alphaCode,
     cities: [],
     citiesId:[],
-    
+    cityName:""
     }
 }
   componentDidMount() {
@@ -71,17 +72,19 @@ axios({
 
       .then(res => {
         console.log(res)
+        console.log(" city res ")
         console.log(this.props.alphaCode+" this.props.alphaCode")
 
     //    const linkCity=res.data.links;
     //    this.setState({ linkCity }); 
 
-    const cities = res.data.data;
-    const citiesId = res.data.data;
+    //  const cities = res.data.data;
+    const citiesId = res.data.data[0].id;
+     const cityName = res.data.data[0].name;
     //  const cities = res.data.cities;
-    this.setState({ cities }); 
+    // this.setState({ cities }); 
     this.setState({ citiesId });
- 
+    this.setState({cityName});
 })
 
     .catch((error)=>{
@@ -92,7 +95,6 @@ axios({
 }
 
   render() {
-    console.log(this.state.citiesId+"cities")
 
     return (
     <Router>
@@ -100,9 +102,12 @@ axios({
     <Link to="/Time">Time</Link>{" "}
     <Link to="/Resturant">Resturant</Link>
             <ul>
-            { this.state.cities.map(city => <li>{city.name}</li>)}
+            {/* { this.state.cities.map(city => <li><Link to="/Time">{city.name}</Link></li>)}
             { this.state.citiesId.map(cityId => <li>{cityId.id}</li>)}
-            <Route path='/time' component={Time} />
+            <Route path='/time' component={Time} /> */}
+            <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.cityName}/> }/>
+            <Route path="/time"  component={() => <Time cityId2={this.state.citiesId}/> }/>
+
             <Route path='/Resturant' component={Resturant} />
 
         </ul>

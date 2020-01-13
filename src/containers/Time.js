@@ -7,11 +7,13 @@ import {
     Link
   } from 'react-router-dom';
 
-  class Time extends Component {  
+  class Time extends Component {
+     
     constructor(props){
-      super();
+      super(props);
       this.state={ 
-        time:""
+        time:"",
+        cityId: this.props.cityId2,
       }
       
       }
@@ -25,7 +27,7 @@ componentDidMount(){
 
 axios({
     "method":"GET",
-    "url":"https://wft-geo-db.p.rapidapi.com/v1/geo/cities/105276/time",
+    "url":"https://wft-geo-db.p.rapidapi.com/v1/geo/cities/"+`${this.props.cityId2}`+"/time",
     "headers":{
     "content-type":"application/octet-stream",
     "x-rapidapi-host":"wft-geo-db.p.rapidapi.com",
@@ -37,6 +39,8 @@ axios({
       this.setState({   
         time:response.headers.date
       });
+      console.log(this.props.cityId2+" this.props.cityId")
+
     })
     .catch((error)=>{
       console.log(error)
