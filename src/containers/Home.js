@@ -10,7 +10,7 @@ export default class Home extends Component {
           <div className="home_content">
             <div className="home_content_inner">
               <div className="home_text_large">discover</div>
-              <div className="home_text_small">Discover new worlds</div>
+              <div className="home_text_small"></div>
             </div>
           </div>
         </div>
