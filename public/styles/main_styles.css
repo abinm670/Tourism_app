@@ -249,7 +249,7 @@ section
 }
 .home_content
 {
-	position: absolute;
+	/* position: absolute; */
 	top: 46%;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
@@ -293,10 +293,11 @@ section
 .header
 {
 	display: block;
-	position: fixed;
-	top: 47px;
-	width: 100%;
+	/* position: fixed; */
+	/* top: 47px; */
+	/* width: 100%; */
 	z-index: 100;
+	margin: 0;
 	-webkit-transition: all 400ms ease;
 	-moz-transition: all 400ms ease;
 	-ms-transition: all 400ms ease;
@@ -309,7 +310,7 @@ section
 }
 .header_container
 {
-	width: 100%;
+	/* width: 100%; */
 	height: 121px;
 	background: #131a2f;
 	-webkit-transition: all 400ms ease;

@@ -368,28 +368,8 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        {/* Footer */}
-        <footer className="footer">
-          <div className="container">
-            <div className="row">
-              {/* Footer Column */}
-              <div className="col-lg-4 footer_col">
-                <div className="footer_about">
-                  {/* Logo */}
-                  <div className="logo_container">
-                    <div className="logo">
-                      <div>destino</div>
-                      <div>travel agency</div>
-                      <div className="logo_image"><img src="images/logo.png" alt="" /></div>
-                    </div>
-                  </div>
-                  <div className="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel eleifend quis, tempus rut rum metus. Pellentesque ultricies enim eu quam fermentum hendrerit.</div>
-                  <div className="copyright">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                    Copyright © All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true" /> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</div>
-                </div>
-              </div>
-            </div></div></footer></div>
+       
+          </div>
         )
     }
 }

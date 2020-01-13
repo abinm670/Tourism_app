@@ -348,9 +348,10 @@ section
 .header
 {
 	display: block;
-	position: fixed;
-	top: 47px;
-	width: 100%;
+	/* position: fixed; */
+	margin: 0;
+	/* top: 47px; */
+	/* width: 100%; */
 	z-index: 100;
 	-webkit-transition: all 400ms ease;
 	-moz-transition: all 400ms ease;
@@ -365,7 +366,7 @@ section
 .header_container
 {
 	width: 100%;
-	height: 121px;
+	/* height: 121px; */
 	background: #131a2f;
 	-webkit-transition: all 400ms ease;
 	-moz-transition: all 400ms ease;
@@ -493,7 +494,7 @@ section
 }
 .main_nav_item.active a
 {
-	color: #fe435b;
+	/* color: #fe435b; */
 }
 .main_nav_item:hover a
 {
@@ -531,7 +532,7 @@ section
 {
 	display: block;
 	position: relative;
-	width: 100%;
+	/* width: 100%; */
 	height: 100%;
 }
 .search_input
