@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './App.css';
 import HeaderBar from './components/HeaderBar.js';
 import Home from './containers/Home.js';
@@ -9,6 +9,7 @@ import Currency from './containers/Currency.js';
 import ContactUs from './containers/ContactUs.js';
 import City from './containers/City.js';
 import City_info from './containers/City_info.js';
+import React, { Component } from 'react';
 
 
 
@@ -20,12 +21,18 @@ import {
 
 
 
-function App() {
+
+class App  extends Component 
+{
+
+  render()
+  {
   return (
     <div>
 
 <Router>
-<HeaderBar />  
+<HeaderBar />
+  
 
 <Route exact path="/" component={Home} />
 <Route path="/About" component={AboutUs} />
@@ -34,6 +41,7 @@ function App() {
 <Route path="/ContactUs" component={ContactUs} />
 <Route path="/City" component={City} />
 <Route path="/City_info" component={City_info} />
+<Route path="/City" component={() => <City m={("we need to pass the info from contery her ")} />} /> 
 
 
 
@@ -51,6 +59,7 @@ function App() {
 
     
   );
+  }
 }
 
 export default App;

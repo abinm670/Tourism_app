@@ -12,7 +12,8 @@ class Country extends Component {
   constructor(props) {
     super();
     this.state = {
-      country: {}
+      country: {},
+      test: "13"
     }
 
   }
@@ -34,11 +35,13 @@ class Country extends Component {
     const m3 = this.state.country.region;
     const flag = this.state.country.flag;
     const a2 = this.state.country.alpha2Code;
+   
+    
 
     return (
 
       <div>
-        {/* <Router> */}
+    
           <div className="row row-cols-1 row-cols-md-2">
             <div className="col mb-4">
               <div className="card">
@@ -73,8 +76,8 @@ class Country extends Component {
               </div>
             </div>
           </div>
-          {/* <Route path="/City" component={() => <City alphaCode={a2} />} /> */}
-        {/* </Router> */}
+          
+    
 
       </div>
 
