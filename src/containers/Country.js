@@ -4,35 +4,7 @@ import React from 'react';
 const Country = props => {
     return (
         <div>
-        {/* Menu Items */}
-        <div className="menu_inner menu_mm">
-          <div className="menu menu_mm">
-            <div className="menu_search_form_container">
-              <form action="#" id="menu_search_form">
-                <input type="search" className="menu_search_input menu_mm" />
-                <button id="menu_search_submit" className="menu_search_submit" type="submit"><img src="images/search_2.png" alt="" /></button>
-              </form>
-            </div>
-            <ul className="menu_list menu_mm">
-              <li className="menu_item menu_mm"><a href="index.html">Home</a></li>
-              <li className="menu_item menu_mm"><a href="about.html">About us</a></li>
-              <li className="menu_item menu_mm"><a href="#">Offers</a></li>
-              <li className="menu_item menu_mm"><a href="news.html">News</a></li>
-              <li className="menu_item menu_mm"><a href="contact.html">Contact</a></li>
-            </ul>
-            {/* Menu Social */}
-            <div className="menu_social_container menu_mm">
-              <ul className="menu_social menu_mm">
-                <li className="menu_social_item menu_mm"><a href="#"><i className="fa fa-pinterest" aria-hidden="true" /></a></li>
-                <li className="menu_social_item menu_mm"><a href="#"><i className="fa fa-linkedin" aria-hidden="true" /></a></li>
-                <li className="menu_social_item menu_mm"><a href="#"><i className="fa fa-instagram" aria-hidden="true" /></a></li>
-                <li className="menu_social_item menu_mm"><a href="#"><i className="fa fa-facebook" aria-hidden="true" /></a></li>
-                <li className="menu_social_item menu_mm"><a href="#"><i className="fa fa-twitter" aria-hidden="true" /></a></li>
-              </ul>
-            </div>
-            <div className="menu_copyright menu_mm">Colorlib All rights reserved</div>
-          </div>
-        </div>
+       
         {/* Home */}
         <div className="home">
           {/* Image by https://unsplash.com/@peecho */}
