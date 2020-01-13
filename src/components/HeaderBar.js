@@ -31,8 +31,8 @@ import {
                       <li className="main_nav_item active"><Link to="/">Home</Link></li>
                       <li className="main_nav_item"><Link to="/About">About us</Link></li>
                       <li className="main_nav_item"><Link to="/Currency">Curency</Link></li>
-                      <li className="main_nav_item"><Link to="Country">Country</Link></li>
-                      <li className="main_nav_item"><a href="contact.html">Contact</a></li>
+                      <li className="main_nav_item"><Link to="/Country">Country</Link></li>
+                      <li className="main_nav_item"><Link to="/ContactUs">Contact us</Link></li>
                     </ul>
                   </nav>
                   {/* Search */}
@@ -65,9 +65,9 @@ import {
                 </form>
               </div>
               <ul className="menu_list menu_mm">
-                <li className="menu_item menu_mm"><a href="#">Home</a></li>
-                <li className="menu_item menu_mm"><a href="about.html">About us</a></li>
-                <li className="menu_item menu_mm"><a href="offers.html">Offers</a></li>
+                <li className="menu_item menu_mm"><Link to="/">Home</Link></li>
+                <li className="menu_item menu_mm"><Link to="/About">About us</Link></li>
+                <li className="menu_item menu_mm"><Link to="/Currency">Curency</Link></li>
                 <li className="menu_item menu_mm"><a href="news.html">News</a></li>
                 <li className="menu_item menu_mm"><a href="contact.html">Contact</a></li>
               </ul>

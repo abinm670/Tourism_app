@@ -6,6 +6,8 @@ import AboutUs from './containers/AboutUs';
 import FooterBar from './components/FooterBar.js';
 import Country from './containers/Country.js';
 import Currency from './containers/Currency.js';
+import ContactUs from './containers/ContactUs.js';
+
 
 import {
   BrowserRouter as Router,
@@ -26,6 +28,8 @@ function App() {
 <Route path="/About" component={AboutUs} />
 <Route path="/Country" component={Country} />
 <Route path="/Currency" component={Currency} />
+<Route path="/ContactUs" component={ContactUs} />
+
 
 
 <FooterBar />
