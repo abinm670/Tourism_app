@@ -1,16 +1,25 @@
 import React from 'react';
-
+import Time from './Time'
 import axios from 'axios';
+import Resturant from './Resturant'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
+  //const citiesId=["1","2"]
 
 export default class City extends React.Component {
     constructor(props){
         super(props)
+
   this.state = {
     alpha: this.props.alphaCode,
     cities: [],
-    citiesId:"",
-  }
+    citiesId:[],
+    
     }
+}
   componentDidMount() {
     const axios = require("axios");
 
@@ -61,37 +70,46 @@ axios({
     //     })
 
       .then(res => {
-        console.log("res")
-        console.log(this.props.alphaCode)
+        console.log(res)
+        console.log(this.props.alphaCode+" this.props.alphaCode")
 
     //    const linkCity=res.data.links;
     //    this.setState({ linkCity }); 
 
-       const cities = res.data.data;
-     //  const cities = res.data.cities;
-        this.setState({ cities }); 
-    })
+    const cities = res.data.data;
+    const citiesId = res.data.data;
+    //  const cities = res.data.cities;
+    this.setState({ cities }); 
+    this.setState({ citiesId });
+ 
+})
 
     .catch((error)=>{
       console.log(error)
     })
 
-    
+   
 }
 
   render() {
-    
+    console.log(this.state.citiesId+"cities")
+
     return (
+    <Router>
     <div>
-    <br></br>
-        <ul>
-        { this.state.cities.map(city => <li>{city.name}</li>)}
-        {/* { this.state.citiesId.map(city => <li>{city.name}</li>)} */}
-      </ul>
-      {/* <ul>
-        { this.state.linkCity.map(link => <li>{link.href}</li>)}
-      </ul> */}
+    <Link to="/Time">Time</Link>{" "}
+    <Link to="/Resturant">Resturant</Link>
+            <ul>
+            { this.state.cities.map(city => <li>{city.name}</li>)}
+            { this.state.citiesId.map(cityId => <li>{cityId.id}</li>)}
+            <Route path='/time' component={Time} />
+            <Route path='/Resturant' component={Resturant} />
+
+        </ul>
       </div>
+    </Router>
+
+
     )
   }
 

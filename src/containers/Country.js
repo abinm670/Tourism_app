@@ -4,7 +4,9 @@ import City from './City';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch,
+    NavLink
   } from 'react-router-dom';
   
  class Country extends Component {  
@@ -38,7 +40,9 @@ render(){
     return(
 
     <div> 
-      <Router>   
+      <Router> 
+        
+        <nav>  
       <div className="row row-cols-1 row-cols-md-2">
         <div className="col mb-4">
           <div className="card">
@@ -73,11 +77,13 @@ render(){
           </div>
         </div>
       </div> 
-            <Route path="/city"  component={() => <City alphaCode={a2}/>}/>
+      </nav>
+      <div>
+
+          <Route path="/city"  component={() => <City alphaCode={a2}/> }/>
+      </div>
         </Router>
-
     </div> 
-
     );
     
 };
