@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import City from './City';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    NavLink
+  } from 'react-router-dom';
+  
+ class Country extends Component {  
+     
+constructor(props){
+super();
+this.state={ 
+    country:{}
+}
 
 
 class Country extends Component {
@@ -36,6 +45,7 @@ class Country extends Component {
  
 
 
+
   render() { 
 
     return (
@@ -53,10 +63,20 @@ class Country extends Component {
 
                 </div>
               </div>
+
             </div>
 )}
               
           </div>
+        </div>
+      </div> 
+      </nav>
+      <div>
+
+          <Route exact path="/city"  component={() => <City alphaCode={a2}/> }/>
+      </div>
+        </Router>
+    </div> 
        
 
       </div>
