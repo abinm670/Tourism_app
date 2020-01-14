@@ -1,19 +1,28 @@
 import React from 'react';
-
-
+import Time from './Time';
 import axios from 'axios';
+import GetCityInfo from'./GetCityInfo';
+import Resturant from './Resturant'
+import {
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
+  //const citiesId=["1","2"]
 
 
 export default class City extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      alpha: this.props.alphaCode,
-      cities: [],
-      citiesId: "",
+    constructor(props){
+        super(props)
 
+  this.state = {
+    alpha: this.props.alphaCode,
+    cities: [],
+    citiesId:[],
+    cityName:""
     }
-  }
+}
+
   componentDidMount() {
     // const axios = require("axios");
 
@@ -25,32 +34,60 @@ export default class City extends React.Component {
         "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
         "x-rapidapi-key": "62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
       },
-      // "params": {
-      // "countryIds": `${this.props.alphaCode}`
-    //  }
+      "params": {
+      "countryIds": `${this.props.m}`
+      // `${this.props.alphaCode}`
+   }
     })
 
       .then(res => {
-        console.log(res)
 
-        //    const linkCity=res.data.links;
-        //    this.setState({ linkCity }); 
+     //   console.log(res)
+     //   console.log(" city res ")
+      //  console.log(this.props.alphaCode+" this.props.alphaCode")
 
-        // const cities = res.data.data;
-        //  const cities = res.data.cities;
-        // this.setState({ cities });
-      })
+
+
+      const cities = res.data.data;
+    const citiesId = res.data.data[0].id;
+     const cityName = res.data.data[0].name;
+    this.setState({ cities }); 
+    this.setState({ citiesId });
+    this.setState({cityName});
+})
+
+      
 
       .catch((error) => {
         console.log(error)
       })
 
 
+   
+}
+
+  render() {
+
+    return (
+    <Router>
+    <div>
+    {/* <Link to="/Time">Time</Link>{" "} */}
+    <Link to="/GetCityInfo">GetCityInfo</Link>{" "}
+    <Link to="/Time">Time</Link>
+            <ul>
+            { this.state.cities.map(city => <li>{city.name}</li>)}
+            {/* { this.state.citiesId.map(cityId => <li>{cityId.id}</li>)} */}
+            <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.cityName}/> }/>
+            <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/>
+
+        </ul>
+
+
   }
 
   render() {
 
-    console.log(this.props.m)
+    console.log(this.state.cities)
 
 
     return (
@@ -61,7 +98,9 @@ export default class City extends React.Component {
         <ul>
 
 
+
          <strong> {this.props.m} </strong>
+
           {/* { this.state.cities.map(city => <li>{city.name}</li>)}
         { this.state.citiesId.map(city => <li>{city.name}</li>)}
         {this.state.id} */}
@@ -75,6 +114,9 @@ export default class City extends React.Component {
        
 
       </div>
+    </Router>
+
+
     )
 
 

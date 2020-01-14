@@ -30,10 +30,16 @@ axios({
 }
  
    
+
     render() {
+        // const m = this.state.country.map((e) => e);
+        // console.log(m)
+        
         return (
             <div>
+
             {this.state.weather}
+
             </div>
         );
     }
