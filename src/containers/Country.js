@@ -41,7 +41,7 @@ class Country extends Component {
     return (
       <div>   
         {/* <Router> */}
-          <div className="row row-cols-1 row-cols-md-2">
+          <div className="row row-cols-3 row-cols-md-2">
           {this.state.fm1.map(item=>
             <div className="col mb-4">
               <div className="card">
