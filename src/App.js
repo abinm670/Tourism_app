@@ -10,7 +10,7 @@ import ContactUs from './containers/ContactUs.js';
 import City from './containers/City.js';
 import City_info from './containers/City_info.js';
 import React, { Component } from 'react';
-import Listshow from './containers/Listshow.js';
+
 
 
 
@@ -41,8 +41,8 @@ class App extends Component {
           <Route path="/City" component={City} />
           <Route path="/City_info" component={City_info} />
           <Route path="/City" component={() => <City m={("find the way")} />} />
-          <Route path="/Listshow" component={Listshow} />
-          
+
+
 
 
 
