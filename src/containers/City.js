@@ -14,7 +14,7 @@ import {
 export default class City extends React.Component {
     constructor(props){
         super(props)
-
+console.log(this.props.match.params.id)
   this.state = {
     alpha: this.props.alphaCode,
     cities: [],
@@ -35,7 +35,7 @@ export default class City extends React.Component {
         "x-rapidapi-key": "62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
       },
       "params": {
-      "countryIds": `${this.props.m}`
+      "countryIds": `${this.props.match.params.id}`
       // `${this.props.alphaCode}`
    }
     })
@@ -46,7 +46,7 @@ export default class City extends React.Component {
      //   console.log(" city res ")
       //  console.log(this.props.alphaCode+" this.props.alphaCode")
 
-
+console.log(res)
 
       const cities = res.data.data;
     const citiesId = res.data.data[0].id;
@@ -67,6 +67,7 @@ export default class City extends React.Component {
 }
 
   render() {
+    console.log()
 
     return (
     <Router>

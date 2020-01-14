@@ -38,9 +38,9 @@ class App extends Component {
           <Route path="/Country" component={Country} />
           <Route path="/Currency" component={Currency} />
           <Route path="/ContactUs" component={ContactUs} />
-          <Route path="/City" component={City} />
+          <Route path="/City/:id" exact component={City} />
           <Route path="/City_info" component={City_info} />
-          <Route path="/City" component={() => <City m={("find the way")} />} />
+          {/* <Route path="/City" component={() => <City m={("find the way")} />} /> */}
 
 
           <FooterBar />
