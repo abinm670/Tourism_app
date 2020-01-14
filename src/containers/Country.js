@@ -34,34 +34,24 @@ class Country extends Component {
        this.setState({country: this.state.country.concat(response.data[i].name) })
        this.setState({flag1: this.state.flag1.concat(response.data[i].flag) })
 
-
-  
      }});
      
     }
  
-
-
-
   render() { 
     const a2 = this.state.country.alpha2Code;
     return (
       <div>   
-<<<<<<< HEAD
         {/* <Router> */}
           <div className="row row-cols-3 row-cols-md-2">
-=======
-        
-          <div className="row row-cols-1 row-cols-md-2">
->>>>>>> 391d04845876e174649582fcd1e915a95ee39807
           {this.state.fm1.map(item=>
             <div className="col mb-4">
               <div className="card">
                 <Link to="/City" >
                   <img src={item.flag} 
-                  className="card-img-top" alt="..." /></Link>
+                  className="card-img-top flagSize" alt="..." /></Link>
                 <div className="card-body">
-                  <h5 className="card-title">{item.name}</h5>
+                  <h4 className="card-title">{item.name}</h4>
                 
                 </div>
               </div>
@@ -70,7 +60,7 @@ class Country extends Component {
 
           </div>
 
-<Router>
+          <Router>
           <Route exact path="/city"  component={() => <City alphaCode={a2}/> }/>
           </Router>    
   
