@@ -9,13 +9,6 @@ import {
     NavLink
   } from 'react-router-dom';
   
- class Country extends Component {  
-     
-constructor(props){
-super();
-this.state={ 
-    country:{}
-}
 
 
 class Country extends Component {
@@ -40,17 +33,21 @@ class Country extends Component {
        this.setState({fm1: this.state.fm1.concat(response.data[i]) })
        this.setState({country: this.state.country.concat(response.data[i].name) })
        this.setState({flag1: this.state.flag1.concat(response.data[i].flag) })
+
+
   
-     }});}
+     }});
+     
+    }
  
 
 
 
   render() { 
-
+    const a2 = this.state.country.alpha2Code;
     return (
       <div>   
-        {/* <Router> */}
+        
           <div className="row row-cols-1 row-cols-md-2">
           {this.state.fm1.map(item=>
             <div className="col mb-4">
@@ -60,30 +57,26 @@ class Country extends Component {
                   className="card-img-top" alt="..." /></Link>
                 <div className="card-body">
                   <h5 className="card-title">{item.name}</h5>
-
+                
                 </div>
               </div>
+              </div>
+          )}
 
-            </div>
-)}
-              
           </div>
-        </div>
-      </div> 
-      </nav>
-      <div>
 
+<Router>
           <Route exact path="/city"  component={() => <City alphaCode={a2}/> }/>
-      </div>
-        </Router>
-    </div> 
-       
+          </Router>    
+  
+        
 
-      </div>
+        </div>
+              
+    )}   
+    
+          }
+  
 
-    );
 
-  };
-
-}
 export default Country;
