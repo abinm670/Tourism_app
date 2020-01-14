@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 import axios from 'axios';
-
 
 export default class City extends React.Component {
   constructor(props) {
@@ -52,7 +50,6 @@ export default class City extends React.Component {
 
     console.log(this.props.m)
 
-
     return (
       <div>
         <br>
@@ -60,24 +57,17 @@ export default class City extends React.Component {
         </br>
         <ul>
 
-
          <strong> {this.props.m} </strong>
           {/* { this.state.cities.map(city => <li>{city.name}</li>)}
         { this.state.citiesId.map(city => <li>{city.name}</li>)}
         {this.state.id} */}
         </ul>
         {/* <ul>
-
         { this.state.linkCity.map(link => <li>{link.href}</li>)}
-   
-      {/* </div> */}
-       
-       
-
+      </ul> */}
       </div>
     )
+  }
 
 
-
-}
 }

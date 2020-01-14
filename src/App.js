@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './App.css';
 import HeaderBar from './components/HeaderBar.js';
 import Home from './containers/Home.js';
@@ -9,6 +9,7 @@ import Currency from './containers/Currency.js';
 import ContactUs from './containers/ContactUs.js';
 import City from './containers/City.js';
 import City_info from './containers/City_info.js';
+import React, { Component } from 'react';
 
 
 
@@ -20,37 +21,43 @@ import {
 
 
 
-function App() {
-  return (
-    <div>
 
-<Router>
-<HeaderBar />  
+class App extends Component {
 
-<Route exact path="/" component={Home} />
-<Route path="/About" component={AboutUs} />
-<Route path="/Country" component={Country} />
-<Route path="/Currency" component={Currency} />
-<Route path="/ContactUs" component={ContactUs} />
-<Route path="/City" component={City} />
-<Route path="/City_info" component={City_info} />
+  render() {
+    return (
+      <div>
+
+        <Router>
+          <HeaderBar />
 
 
-
-<FooterBar />
-
-</Router>
-    
-    
-      
-                   </div>
+          <Route exact path="/" component={Home} />
+          <Route path="/About" component={AboutUs} />
+          <Route path="/Country" component={Country} />
+          <Route path="/Currency" component={Currency} />
+          <Route path="/ContactUs" component={ContactUs} />
+          <Route path="/City" component={City} />
+          <Route path="/City_info" component={City_info} />
+          <Route path="/City" component={() => <City m={("find the way")} />} />
 
 
 
+          <FooterBar />
+
+        </Router>
 
 
-    
-  );
+
+      </div>
+
+
+
+
+
+
+    );
+  }
 }
 
 export default App;

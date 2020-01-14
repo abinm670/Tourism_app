@@ -7,6 +7,8 @@ import {
   Link
 } from 'react-router-dom';
 
+
+
 class Country extends Component {
 
   constructor(props) {
@@ -27,6 +29,8 @@ class Country extends Component {
       });
 
   }
+
+
   render() {
 
     const m1 = this.state.country.name;
@@ -35,62 +39,58 @@ class Country extends Component {
     const flag = this.state.country.flag;
     const a2 = this.state.country.alpha2Code;
 
-
     
 
     return (
 
 
-
       <div>
-        {/* <Router> */}
-        <div className="row row-cols-1 row-cols-md-2">
-          <div className="col mb-4">
-            <div className="card">
-              <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
-              <div className="card-body">
-                <h5 className="card-title">{m1}</h5>
-
-              </div>
-            </div>
-          </div>
-          <div className="col mb-4">
-            <div className="card">
-              <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
-              <div className="card-body">
-                <h5 className="card-title">{m1}</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col mb-4">
-            <div className="card">
-              <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
-              <div className="card-body">
-                <h5 className="card-title">{m1}</h5>
-              </div>
-            </div>
-          </div>
-          <div className="col mb-4">
-            <div className="card">
-              <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
-              <Router>
-      
-      <Route path="/City" component={() => <City x={a2} />} />
-      </Router>
-
-              <div className="card-body">
-                <h5 className="card-title">{m1}</h5>
-              </div>
-            </div>
-          </div>
-        </div>
+       
         
+        {/* <Router> */}
+          <div className="row row-cols-1 row-cols-md-2">
+            <div className="col mb-4">
+              <div className="card">
+                <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
+                <div className="card-body">
+                  <h5 className="card-title">{m1}</h5>
+
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card">
+                <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
+                <div className="card-body">
+                  <h5 className="card-title">{m1}</h5>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card">
+                <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
+                <div className="card-body">
+                  <h5 className="card-title">{m1}</h5>
+                </div>
+              </div>
+            </div>
+            <div className="col mb-4">
+              <div className="card">
+                <Link to="/City" ><img src={flag} className="card-img-top" alt="..." /></Link>
+                <div className="card-body">
+                  <h5 className="card-title">{m1}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <Route path="/City" component={() => <City alphaCode={a2} />} /> */}
+        {/* </Router> */}
 
       </div>
 
     );
 
-  }
+  };
 
 }
 export default Country;
