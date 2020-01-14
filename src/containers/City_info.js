@@ -1,41 +1,36 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+
 class City_info extends Component {
 
-    constructor(props) {
+    constructor(props){
         super(props);
-        this.state = {
-            country: ""
+        this.state={
+            weather: 0
         }
     }
 
+componentDidMount(){
 
+//weather 
+axios({
+    method: 'get',
+    url: 'http://api.openweathermap.org/data/2.5/weather?q=Jeddah,SA&APPID=544b1439e50b5d500d96cb18b849d3c2'
+}).then(response => {
+    console.log(response.data.main.temp - 273.15);
+    this.setState({
+        weather: response.data.main.temp - 273.15
+    })
+}).catch(error => {
+    console.log(error);
+})
 
-    componentDidMount() {
-        let data = [];
-        console.log("Component did mount")
-        axios.get('https://newsapi.org/v2/everything?q=bitcoin&from=2019-12-14&sortBy=publishedAt&apiKey=63232ca2eaac4d8880eb882a8e07c6e0')
-            .then(res => {
-                // this.setState({
-                //     country: res.data
-                // });
+    
 
-                // let x=[];
+}
+ 
+   
 
-               
-                //     res.data.articles.map((e,m) =>
-                    
-                //         x =data[m]
-                //         x.push(e)
-
-                    
-                    // )
-                
-
-            });
-            console.log(data)
-
-    }
     render() {
         // const m = this.state.country.map((e) => e);
         // console.log(m)
@@ -43,12 +38,7 @@ class City_info extends Component {
         return (
             <div>
 
-
-              
-
-
-
-
+            {this.state.weather}
 
             </div>
         );

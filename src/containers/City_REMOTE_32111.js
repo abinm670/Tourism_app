@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 import axios from 'axios';
-
 
 export default class City extends React.Component {
   constructor(props) {
@@ -25,23 +23,20 @@ export default class City extends React.Component {
         "x-rapidapi-host": "wft-geo-db.p.rapidapi.com",
         "x-rapidapi-key": "62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
       },
-      "params": {
-      "countryIds": `${this.props.m}`
-      // `${this.props.alphaCode}`
-   }
+      // "params": {
+      // "countryIds": `${this.props.alphaCode}`
+    //  }
     })
 
       .then(res => {
-        console.log(this.props.m)
-        console.log(res.data.data)
-
+        console.log(res)
 
         //    const linkCity=res.data.links;
         //    this.setState({ linkCity }); 
 
         // const cities = res.data.data;
-        // const cities = res.data.cities;
-        this.setState({ cities:res.data.map(e=> e) });
+        //  const cities = res.data.cities;
+        // this.setState({ cities });
       })
 
       .catch((error) => {
@@ -53,8 +48,7 @@ export default class City extends React.Component {
 
   render() {
 
-    console.log(this.state.cities)
-
+    console.log(this.props.m)
 
     return (
       <div>
@@ -63,26 +57,17 @@ export default class City extends React.Component {
         </br>
         <ul>
 
-
-
          <strong> {this.props.m} </strong>
-
           {/* { this.state.cities.map(city => <li>{city.name}</li>)}
         { this.state.citiesId.map(city => <li>{city.name}</li>)}
         {this.state.id} */}
         </ul>
         {/* <ul>
-
         { this.state.linkCity.map(link => <li>{link.href}</li>)}
-   
-      {/* </div> */}
-       
-       
-
+      </ul> */}
       </div>
     )
+  }
 
 
-
-}
 }

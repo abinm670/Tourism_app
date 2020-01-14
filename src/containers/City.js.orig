@@ -63,10 +63,12 @@ export default class City extends React.Component {
         </br>
         <ul>
 
-
+<<<<<<< HEAD
+         <strong> {this.state.cities} </strong>
+=======
 
          <strong> {this.props.m} </strong>
-
+>>>>>>> a-dev
           {/* { this.state.cities.map(city => <li>{city.name}</li>)}
         { this.state.citiesId.map(city => <li>{city.name}</li>)}
         {this.state.id} */}
