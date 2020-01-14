@@ -81,45 +81,9 @@ export default class City extends React.Component {
             <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/>
 
         </ul>
-
-
-  }
-
-  render() {
-
-    console.log(this.state.cities)
-
-
-    return (
-      <div>
-        <br>
-
-        </br>
-        <ul>
-
-
-
-         <strong> {this.props.m} </strong>
-
-          {/* { this.state.cities.map(city => <li>{city.name}</li>)}
-        { this.state.citiesId.map(city => <li>{city.name}</li>)}
-        {this.state.id} */}
-        </ul>
-        {/* <ul>
-
-        { this.state.linkCity.map(link => <li>{link.href}</li>)}
-   
-      {/* </div> */}
-       
-       
-
-      </div>
-    </Router>
-
-
+        </div>
+        </Router>
     )
-
-
-
+  
 }
 }
