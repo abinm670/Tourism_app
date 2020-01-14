@@ -129,13 +129,8 @@ DisplayAttrac(){
                     </div>
             ))}
             
-            {/* <h3>{this.state.name[i]}</h3>
-            <p>{this.state.website[i]}</p> */}
             </div>)
-   // }
-    
-        
-   // }
+   
 }
 }
 

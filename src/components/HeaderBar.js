@@ -67,6 +67,7 @@ const HeaderBar = function (props) {
               <li className="menu_item menu_mm"><Link to="/">Home</Link></li>
               <li className="menu_item menu_mm"><Link to="/About">About us</Link></li>
               <li className="menu_item menu_mm"><Link to="/Currency">Curency</Link></li>
+              <li className="menu_item menu_mm"><Link to="/Country">Country</Link></li>
               <li className="menu_item menu_mm"><a href="news.html">News</a></li>
               <li className="menu_item menu_mm"><a href="contact.html">Contact</a></li>
             </ul>

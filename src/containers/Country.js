@@ -99,16 +99,30 @@ import {
   Route,
   Link
 } from 'react-router-dom';
+
 class Country extends Component {
   constructor(props){
+    
     super(props);
-    this.state={      
+    this.state={ 
+      el:"",     
     country:[],
    flag1:[],
    a2:[],
    fm1:[],
     }}
+    
+
+
+     displayID(el2)
+      {
+         alert(el2);
+         this.setState({el: el2 })
+          return this.state.el
+      }       
+
     componentDidMount(){
+
       console.log("Component did mount")
     axios.get(`https://restcountries.eu/rest/v2`)
         .then(response=>{
@@ -119,28 +133,40 @@ class Country extends Component {
        this.setState({flag1: this.state.flag1.concat(response.data[i].flag) })
        this.setState({a2: this.state.a2.concat(response.data[i].alpha2Code) })
 
-     }});}
+     }});
+     
+    }
+    
   render() { 
+    console.log("el"+this.state.el)
 
-console.log(this.state.a2+"this.state.a2")
     return (
       <div>   
-        {/* <Router> */}
+         <Router> 
           <div className="row row-cols-1 row-cols-md-2">
+          {/* <a href="#" id="flagLink">click</a> */}
+
           {this.state.fm1.map(item=>
             <div className="col mb-4">
-              <div className="card">
-                <Link to="/City" ><img src={item.flag} className="card-img-top" alt="..." /></Link>
+              <div className="card" >
+                <Link to="/City" ><img src={item.flag} id={item.alpha2Code} className="card-img-top" alt="..." onClick={()=>this.displayID(item.alpha2Code)}/></Link>
                 <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
-                <p>{item.a2}</p>                
+                <h5 className="card-title" >{item.name}</h5>
+                <p className="card-text">{item.alpha2Code}</p>
+                                
                 </div>
               </div>
-            </div>
+            </div>  
 )}
+
           </div>
+          <Route exact path="/City"  component={() => <City alphaCode={this.state.el}/> }/>
+
+          </Router> 
+
       </div>
     );
   };
+  
 }
 export default Country;
