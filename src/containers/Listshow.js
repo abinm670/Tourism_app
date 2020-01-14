@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
- class Listshow extends Component {   
+class Listshow extends Component {   
 
 constructor(props){
 
