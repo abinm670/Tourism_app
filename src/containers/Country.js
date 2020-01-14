@@ -80,7 +80,7 @@ render(){
       </nav>
       <div>
 
-          <Route path="/city"  component={() => <City alphaCode={a2}/> }/>
+          <Route exact path="/city"  component={() => <City alphaCode={a2}/> }/>
       </div>
         </Router>
     </div> 

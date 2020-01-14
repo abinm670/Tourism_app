@@ -9,13 +9,14 @@ import {
   
   class Resturant extends Component {  
     constructor(props){
-        super();
+        super(props);
         this.state={ 
           name:"",
           description:"",
-          img:""
+          img:"",
+          cityIdR: this.props.cityIdResturant
         }
-        
+        console.log(this.props.cityIdResturant+"this.props.cityIdResturant")
     }
 componentDidMount(){
 const axios = require("axios");
@@ -36,7 +37,7 @@ axios({
     "restaurant_mealtype":"10598%2C10599",
     "currency":"USD",
     "lang":"en_US",
-    "location_id":"298542"
+    "location_id":`${this.props.cityIdResturant}`
     }
     })
     .then((response)=>{

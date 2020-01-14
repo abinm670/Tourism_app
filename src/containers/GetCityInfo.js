@@ -2,6 +2,8 @@ import React,{Component} from 'react';
 import axios from 'axios';
 import City from './City';
 import Time from './Time'
+import Resturant from './Resturant';
+import Attraction from './Attraction';
 
 import {
     BrowserRouter as Router,
@@ -36,12 +38,13 @@ axios({
     }
     })
     .then((response)=>{
-        console.log(response)
-        console.log(response.data.data[0].result_object.location_id)
+     //   console.log(response)
+     //   console.log(response.data.data[0].result_object.location_id)
           this.setState({   
         cityId:response.data.data[0].result_object.location_id
       });
-      console.log(this.props.cityName2+" this.props.cityName2")
+     // console.log(this.props.cityName2+" this.props.cityName2")
+     // console.log(this.state.cityId+"cityId")
 
     })
     .catch((error)=>{
@@ -51,14 +54,19 @@ axios({
 render(){
   return(
     <div>
-          <br></br> 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-<h3>{this.state.cityId}</h3>
-<Route path="/time"  component={() => <Time cityId2={this.state.cityId}/> }/>
+    <Router>
+    <Link to="/Resturant">Resturant</Link>
+    <Link to="/Attraction">Attraction</Link>
 
+    <br></br> 
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <h3>{this.state.cityId}</h3>
+    <Route path="/Resturant"  component={() => <Resturant cityIdResturant={this.state.cityId}/> }/>
+    <Route path="/Attraction"  component={() => <Attraction cityIdAttraction={this.state.cityId}/> }/>
+    </Router>
     </div> 
 
     );

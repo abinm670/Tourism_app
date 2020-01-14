@@ -71,18 +71,17 @@ axios({
     //     })
 
       .then(res => {
-        console.log(res)
-        console.log(" city res ")
-        console.log(this.props.alphaCode+" this.props.alphaCode")
+     //   console.log(res)
+     //   console.log(" city res ")
+      //  console.log(this.props.alphaCode+" this.props.alphaCode")
 
     //    const linkCity=res.data.links;
     //    this.setState({ linkCity }); 
 
-    //  const cities = res.data.data;
+      const cities = res.data.data;
     const citiesId = res.data.data[0].id;
      const cityName = res.data.data[0].name;
-    //  const cities = res.data.cities;
-    // this.setState({ cities }); 
+    this.setState({ cities }); 
     this.setState({ citiesId });
     this.setState({cityName});
 })
@@ -99,16 +98,14 @@ axios({
     return (
     <Router>
     <div>
-    <Link to="/Time">Time</Link>{" "}
-    <Link to="/Resturant">Resturant</Link>
+    {/* <Link to="/Time">Time</Link>{" "} */}
+    <Link to="/GetCityInfo">GetCityInfo</Link>{" "}
+    <Link to="/Time">Time</Link>
             <ul>
-            {/* { this.state.cities.map(city => <li><Link to="/Time">{city.name}</Link></li>)}
-            { this.state.citiesId.map(cityId => <li>{cityId.id}</li>)}
-            <Route path='/time' component={Time} /> */}
+            { this.state.cities.map(city => <li>{city.name}</li>)}
+            {/* { this.state.citiesId.map(cityId => <li>{cityId.id}</li>)} */}
             <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.cityName}/> }/>
-            <Route path="/time"  component={() => <Time cityId2={this.state.citiesId}/> }/>
-
-            <Route path='/Resturant' component={Resturant} />
+            <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/>
 
         </ul>
       </div>
