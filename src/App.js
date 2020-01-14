@@ -41,7 +41,7 @@ class App  extends Component
 <Route path="/ContactUs" component={ContactUs} />
 <Route path="/City" component={City} />
 <Route path="/City_info" component={City_info} />
-<Route path="/City" component={() => <City m={("we need to pass the info from contery her ")} />} /> 
+<Route path="/City" component={() => <City m={("SA")} />} /> 
 
 
 
