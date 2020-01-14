@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import City from './City';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
-
+    BrowserRouter as Router,
+    Route,
+    Link,
+    Switch,
+    NavLink
+  } from 'react-router-dom';
+  
 
 
 class Country extends Component {
@@ -31,17 +33,27 @@ class Country extends Component {
        this.setState({fm1: this.state.fm1.concat(response.data[i]) })
        this.setState({country: this.state.country.concat(response.data[i].name) })
        this.setState({flag1: this.state.flag1.concat(response.data[i].flag) })
+
+
   
-     }});}
+     }});
+     
+    }
  
 
 
-  render() { 
 
+  render() { 
+    const a2 = this.state.country.alpha2Code;
     return (
       <div>   
+<<<<<<< HEAD
         {/* <Router> */}
           <div className="row row-cols-3 row-cols-md-2">
+=======
+        
+          <div className="row row-cols-1 row-cols-md-2">
+>>>>>>> 391d04845876e174649582fcd1e915a95ee39807
           {this.state.fm1.map(item=>
             <div className="col mb-4">
               <div className="card">
@@ -50,20 +62,26 @@ class Country extends Component {
                   className="card-img-top" alt="..." /></Link>
                 <div className="card-body">
                   <h5 className="card-title">{item.name}</h5>
-
+                
                 </div>
               </div>
-            </div>
-)}
-              
+              </div>
+          )}
+
           </div>
-       
 
-      </div>
+<Router>
+          <Route exact path="/city"  component={() => <City alphaCode={a2}/> }/>
+          </Router>    
+  
+        
 
-    );
+        </div>
+              
+    )}   
+    
+          }
+  
 
-  };
 
-}
 export default Country;
