@@ -110,12 +110,6 @@ class ContactUs extends Component {
             </div>
           </div>
         </div>
-        {/* Newsletter */}
-       
-
-
-
-
          
       </div>
     );

@@ -18,6 +18,8 @@ import {
       this.state={
         cityName: this.props.match.params.id,
         cityId:"",
+        backgroundImageR: '',
+        backgroundImageA: ''
       }
 
       }
@@ -47,14 +49,64 @@ axios({
     .catch((error)=>{
       console.log(error)
     })
+
+  axios({
+      method: 'get',
+      url: 'http://api.unsplash.com/search/photos?query=food&client_id=8f885b1c073299c10993ac2aaef37f9f24a7c7ef6194119d0db86dfae4707d97'
+  })
+  .then(response => {
+      console.log(response);
+      for(let i=0; i<3;i++){
+      console.log(response.data.results[i].urls.regular);
+      }
+      this.setState(
+        {backgroundImageR: response.data.results[ Math.floor(Math.random() * 9)+1].urls.regular}
+      )
+  })
+  .catch(error => {
+      console.log(error);
+  })
+
+  axios({
+    method: 'get',
+    url: 'http://api.unsplash.com/search/photos?query=attraction&client_id=8f885b1c073299c10993ac2aaef37f9f24a7c7ef6194119d0db86dfae4707d97'
+})
+.then(response => {
+    console.log(response);
+    for(let i=0; i<3;i++){
+    console.log(response.data.results[i].urls.regular);
+    }
+    this.setState(
+      {backgroundImageA: response.data.results[ Math.floor(Math.random() * 9)+1].urls.regular}
+    )
+})
+.catch(error => {
+    console.log(error);
+})
 }
 render(){
   console.log(this.state.cityId+"this.state.cityId")
   console.log(this.state.cityName+"this.state.cityName")
   return(
+    
     <div>
-    <Link to={"/Resturant/" +  this.state.cityId }>Resturant</Link>
-    <Link to={"/Attraction/" +  this.state.cityId}>Attraction</Link>
+
+            <div className="container card">
+            <Link to={"/Resturant/" +  this.state.cityId }><img src={this.state.backgroundImageR} className="card-img-top" alt="..." width="210px"height="210px"/></Link>
+              <div className="card-body">
+                <h5 className="card-title">Resturant</h5>
+              </div>
+            </div>
+    
+            <div className="container card">
+            <Link to={"/Attraction/" +  this.state.cityId }><img src={this.state.backgroundImageA} className="card-img-top" alt="..." width="210px"height="210px"/></Link>
+              <div className="card-body">
+                <h5 className="card-title">Attraction</h5>
+              </div>
+            </div>
+
+    {/* <Link to={"/Resturant/" +  this.state.cityId }>Resturant</Link> */}
+    {/* <Link to={"/Attraction/" +  this.state.cityId}>Attraction</Link> */}
     </div>
 
     );

@@ -114,18 +114,18 @@ DisplayAttrac(){
     // }
     // else{
         return(
-            <div>
-            
+        <div className="row row-cols-3 row-cols-md-2">
                 { this.state.name.map((n, index) => (
-                    
-                    <div>
+                    <div className="col mb-4">
+                    <div className="card">
+                    <img className="card-img-top flagSize" src={this.state.img[index]}  alt="..." />
                     <h3>{this.state.name[index]}</h3>
                     <h3>{this.state.website[index]}</h3>
-                    <img src={this.state.img[index]}  alt="..." />
                     </div>
-            ))}
-            
-            </div>)
+            </div>
+            ))}            
+        </div>
+        )
    
 }
 }

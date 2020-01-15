@@ -12,8 +12,13 @@ import Time from './containers/Time.js';
 import GetCityInfo from './containers/GetCityInfo';
 import Resturant from './containers/Resturant';
 import Attraction from './containers/Attraction';
-// import Newspapers from './newspapers.js'
+
+import Newspapers from './newspapers.js'
   
+
+import Weather from './containers/Weather';
+
+
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
@@ -40,8 +45,12 @@ class App extends Component {
           <Route path="/GetCityInfo/:id"  exact component={GetCityInfo}/>
           <Route path="/Resturant/:id"  exact component={Resturant}/>
           <Route path="/Attraction/:id"  exact component={Attraction}/>  
+
            
           {/* <Newspapers Neews={Newsdata}/> */}
+
+
+          <Route path="/Weather/:id/:id2"  exact component={Weather}/>  
 
           <FooterBar />
           </Router>
