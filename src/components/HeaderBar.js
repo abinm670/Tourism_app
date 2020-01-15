@@ -28,11 +28,12 @@ const HeaderBar = function (props) {
                 <nav className="main_nav ml-auto">
                   <ul className="main_nav_list">
                     <li className="main_nav_item active"><Link to="/">Home</Link></li>
-                    <li className="main_nav_item"><Link to="/About">About us</Link></li>
+                    <li className="main_nav_item"><Link to="/Country">Countries</Link></li>
                     <li className="main_nav_item"><Link to="/Currency">Curency</Link></li>
-                    <li className="main_nav_item"><Link to="/Country">Country</Link></li>
+                    <li className="main_nav_item"><Link to="/News">News</Link></li>
+                    <li className="main_nav_item"><Link to="/About">About us</Link></li>
                     <li className="main_nav_item"><Link to="/ContactUs">Contact us</Link></li>
-                    <li className="main_nav_item"><Link to="/City_info">City info</Link></li>
+                  
                     
 
 
@@ -69,9 +70,10 @@ const HeaderBar = function (props) {
             </div>
             <ul className="menu_list menu_mm">
               <li className="menu_item menu_mm"><Link to="/">Home</Link></li>
-              <li className="menu_item menu_mm"><Link to="/About">About us</Link></li>
+              <li className="menu_item menu_mm"><Link to="/Country">Countries</Link></li>
               <li className="menu_item menu_mm"><Link to="/Currency">Curency</Link></li>
-              <li className="menu_item menu_mm"><a href="news.html">News</a></li>
+              <li className="menu_item menu_mm"><a href="/News">News</a></li>
+              <li className="menu_item menu_mm"><Link to="/About">About us</Link></li>
               <li className="menu_item menu_mm"><a href="contact.html">Contact</a></li>
             </ul>
             {/* Menu Social */}
