@@ -42,11 +42,9 @@ class AboutUs extends Component
                 <div>
                     <br></br>
                     <br></br>
-                    <br></br>
                 </div>
                 <h2 className="text-center"> About Us </h2>
                 <div>
-                    <br></br>
                     <br></br>
                     <br></br>
                 </div>
