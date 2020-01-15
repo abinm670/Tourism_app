@@ -17,10 +17,10 @@ class Country extends Component {
 
     super(props);
     this.state={      
-    country:[],
-    s:[],
-   flag1:[],
-   fm1:[]
+      country:[],
+      s:[],
+      flag1:[],
+      fm1:[]
     }}
 
 
