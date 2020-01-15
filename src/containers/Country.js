@@ -39,11 +39,12 @@ class Country extends Component {
      }});
      
     }
- 
-
+   
 
 
   render() { 
+
+    
     const a2 = this.state.country.alpha2Code;
     return (
       <div>   
