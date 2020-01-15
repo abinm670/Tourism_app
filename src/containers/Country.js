@@ -39,16 +39,8 @@ class Country extends Component {
      }});
      
     }
-<<<<<<< HEAD
-   
-
-
-=======
  
->>>>>>> master
   render() { 
-
-    
     const a2 = this.state.country.alpha2Code;
     console.log(this.state.data)
     return (
