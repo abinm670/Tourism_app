@@ -91,26 +91,26 @@ class AboutUs extends Component
 
         <div className="card-deck">
             <div className="card">
-              <img src={this.state.backgroundImage} className="card-img-top" alt="..."/>
+              <img src={this.state.backgroundImage} className="card-img-top" alt="..." height="210px"/>
               <div className="card-body">
                 <h5 className="card-title">Abdullah Binmahfouz</h5>
               </div>
             </div>
 
             <div className="card">
-              <img src={this.state.backgroundImage} className="card-img-top" alt="..."/>
+              <img src={this.state.backgroundImage} className="card-img-top" alt="..." height="210px" />
               <div className="card-body">
                 <h5 className="card-title">Hanin Nouh</h5>
               </div>
             </div>
             <div className="card">
-              <img src={this.state.backgroundImage} className="card-img-top" alt="..."/>
+              <img src={this.state.backgroundImage} className="card-img-top" alt="..." height="210px"/>
               <div className="card-body">
                 <h5 className="card-title">Mohammed Alamry</h5>
               </div>
             </div>
             <div className="card">
-              <img src={this.state.backgroundImage} className="card-img-top" alt="..."/>
+              <img src={this.state.backgroundImage} className="card-img-top" alt="..." height="210px"/>
               <div className="card-body">
                 <h5 className="card-title">Khadijah Saber</h5>
               </div>

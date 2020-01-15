@@ -27,7 +27,7 @@ const HeaderBar = function (props) {
                 {/* Main Navigation */}
                 <nav className="main_nav ml-auto">
                   <ul className="main_nav_list">
-                    <li className="main_nav_item active"><Link to="/">Home</Link></li>
+                    <li className="main_nav_item"><Link to="/">Home</Link></li>
                     <li className="main_nav_item"><Link to="/Country">Countries</Link></li>
                     <li className="main_nav_item"><Link to="/Currency">Curency</Link></li>
                     <li className="main_nav_item"><Link to="/News">News</Link></li>

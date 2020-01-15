@@ -44,8 +44,18 @@ class Country extends Component {
     const a2 = this.state.country.alpha2Code;
     console.log(this.state.data)
     return (
-      <div>   
-        {/* <Router> */}
+      <div className="cont">   
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
+                   <h2 className="text-center">  COUNTIRES </h2>
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
           <div className="row row-cols-3 row-cols-md-2">
           {this.state.fm1.map(item=>
             <div className="col mb-4">
