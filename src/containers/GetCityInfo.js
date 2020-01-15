@@ -12,14 +12,14 @@ import {
   } from 'react-router-dom';
 
   class GetCityInfo extends Component {
-     
+
     constructor(props){
       super(props);
-      this.state={ 
-        cityName: this.props.cityName2,
+      this.state={
+        cityName: this.props.match.params.id,
         cityId:"",
       }
-      
+
       }
 componentDidMount(){
 const axios = require("axios");
@@ -30,48 +30,35 @@ axios({
     "headers":{
     "content-type":"application/octet-stream",
     "x-rapidapi-host":"tripadvisor1.p.rapidapi.com",
-    "x-rapidapi-key":"62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
+    "x-rapidapi-key":"512d823b2cmsh91ce58230ff3341p167b1cjsnb3f37af99e5b"
     },"params":{
-    "query":`${this.props.cityName2}`,
+    "query":`${this.props.match.params.id}`,
     "lang":"en_US",
     "units":"km"
     }
     })
     .then((response)=>{
-     //   console.log(response)
-     //   console.log(response.data.data[0].result_object.location_id)
-          this.setState({   
-        cityId:response.data.data[0].result_object.location_id
-      });
-     // console.log(this.props.cityName2+" this.props.cityName2")
-     // console.log(this.state.cityId+"cityId")
-
+      console.log(response)
+      console.log(response.data.data[0].result_object.location_id+"response.data.data[0].result_object.location_id")
+      this.setState({cityId:response.data.data[0].result_object.location_id});
+          this.setState({cityName:this.props.match.params.id});
     })
+    
     .catch((error)=>{
       console.log(error)
     })
 }
 render(){
+  console.log(this.state.cityId+"this.state.cityId")
+  console.log(this.state.cityName+"this.state.cityName")
   return(
     <div>
-    <Router>
-    <Link to="/Resturant">Resturant</Link>
-    <Link to="/Attraction">Attraction</Link>
-
-    <br></br> 
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <h3>{this.state.cityId}</h3>
-    <Route path="/Resturant"  component={() => <Resturant cityIdResturant={this.state.cityId}/> }/>
-    <Route path="/Attraction"  component={() => <Attraction cityIdAttraction={this.state.cityId}/> }/>
-    </Router>
-    </div> 
+    <Link to={"/Resturant/" +  this.state.cityId }>Resturant</Link>
+    <Link to={"/Attraction/" +  this.state.cityId}>Attraction</Link>
+    </div>
 
     );
 }
-    
 
 }
 export default GetCityInfo;

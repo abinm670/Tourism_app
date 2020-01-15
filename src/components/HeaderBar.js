@@ -2,13 +2,9 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Link,
-
 } from 'react-router-dom';
-
-
 const HeaderBar = function (props) {
   return (
-
     <div>
       {/* Header */}
       <header className="header" >
@@ -33,10 +29,6 @@ const HeaderBar = function (props) {
                     <li className="main_nav_item"><Link to="/News">News</Link></li>
                     <li className="main_nav_item"><Link to="/About">About us</Link></li>
                     <li className="main_nav_item"><Link to="/ContactUs">Contact us</Link></li>
-                  
-                    
-
-
                   </ul>
                 </nav>
                 {/* Search */}
@@ -91,9 +83,6 @@ const HeaderBar = function (props) {
         </div>
       </div>
     </div>
-
   );
-
 }
-
 export default HeaderBar;
