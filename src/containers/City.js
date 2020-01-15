@@ -113,7 +113,7 @@ console.log(this.props.match.params.id)
              <div className="col mb-4">
               <div className="card" >
               <h5 ><Link to ={"/Time/" + city.id}  >Time</Link> </h5>
-                    <h5 ><Link to ={"/Weather/" + city.name +','+this.state.alpha}  >Weather</Link> </h5>
+                    <h5><Link to ={"/Weather/" + city.name +','+this.state.alpha}  >Weather</Link> </h5>
                 <Link to={"/GetCityInfo/" +  city.name} >
                    <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " 
                    className="card-img-top flagSize" alt="..." /></Link> 
