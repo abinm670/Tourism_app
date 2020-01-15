@@ -16,7 +16,7 @@ This website will be able to give you a nice tour and gerate idea of each countr
 ### wireframes :
 :point_right: Watch it 
 <br><br>
-<img src="https://github.com/KOSaber/Pro3_test2/blob/khadijah/img/wireframe.jpg" >
+<img src="https://github.com/KOSaber/Pro3_test2/blob/khadijah/img/wireframe.jpg" width="200" height="300">
 <br>
 ## Development Process and problem-solving strategy:
 - [x]  props
