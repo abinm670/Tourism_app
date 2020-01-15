@@ -85,6 +85,7 @@ console.log(res)
   render() {
     return (
 
+
         <div className="row row-cols-3 row-cols-md-2">
           {this.state.cities.map(item=>
             <div className="col mb-4">
@@ -141,6 +142,45 @@ DisplayRest(){
 
 //           </div>
 //       </Router>
+
+            
+         <Router> 
+
+           <div className="cont">
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
+    <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
+          
+           <div className="row row-cols-3 row-cols-md-2">
+           
+              {/* <Link to="/Time">Time</Link>{" "} */}
+           {/* <Link to="/GetCityInfo">GetCityInfo</Link>{" "} */}
+           {/* <Link to="/Time">Time</Link> */}
+           {this.state.cities.map(city => 
+             <div className="col mb-4">
+              <div className="card">
+                <Link to={"/GetCityInfo/" +  city.name} >
+                   <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " 
+                   className="card-img-top flagSize" alt="..." /></Link> 
+                 <div className="card-body">
+                   <h3 className="card-title">{city.name}</h3>
+                 </div>
+                 {/* <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.citiesName}/> }/>
+                 <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/> */}
+               </div> 
+               </div> 
+           )}
+        </div>
+          </div>
+      </Router>
         
 //       )
 //  }
