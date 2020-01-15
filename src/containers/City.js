@@ -15,7 +15,7 @@ export default class City extends React.Component {
         super(props)
 console.log(this.props.match.params.id)
   this.state = {
-    alpha: this.props.alphaCode,
+    alpha: this.props.match.params.id,
     cities: [],
     citiesId:[],
     citiesName:[],
@@ -110,28 +110,24 @@ console.log(this.props.match.params.id)
                     <br/>
                     <br/>
                         
-           <div className="row row-cols-3 row-cols-md-2">
+        <div className="row row-cols-3 row-cols-md-2">
            
-              {/* <Link to="/Time">Time</Link>{" "} */}
-           {/* <Link to="/GetCityInfo">GetCityInfo</Link>{" "} */}
-           {/* <Link to="/Time">Time</Link> */}
            {this.state.cities.map(city => 
              <div className="col mb-4">
-              <div className="card">
+              <div className="card" >
+              <h5 ><Link to ={"/Time/" + city.id}  >Time</Link> </h5>
+                    <h5 ><Link to ={"/Weather/" + city.name +','+this.state.alpha}  >Weather</Link> </h5>
                 <Link to={"/GetCityInfo/" +  city.name} >
                    <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " 
                    className="card-img-top flagSize" alt="..." /></Link> 
-                 <div className="card-body">
-                   <h3 className="card-title">{city.name}</h3>
-                 </div>
+                   <h3 className="card-title" >{city.name}</h3>
                  {/* <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.citiesName}/> }/>
                  <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/> */}
-               <Route path="/GetCityInfo" component={() => <GetCityInfo cityName2={this.state.citiesName} />} />
-            <Route path="/Time" component={() => <Time cityIdTime={this.state.citiesId} />} />
+               {/* <Route path="/GetCityInfo" component={() => <GetCityInfo cityName2={this.state.citiesName} />} /> */}
                
                
-               </div> 
-               </div> 
+            </div> 
+        </div> 
            )}
         
         </div>
