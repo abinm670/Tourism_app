@@ -17,6 +17,7 @@ class Country extends Component {
       s: [],
       flag1: [],
       fm1: []
+      
     }
   }
   componentDidMount() {
@@ -24,7 +25,10 @@ class Country extends Component {
       .then(response => {
 
 
+
         for (let i = 0; i < 5; i++) {
+
+
 
 
 
