@@ -30,6 +30,25 @@
 .App-link {
   color: #61dafb;
 }
+.card{
+  width: 330px ;
+  height: 270px;
+}
+.flagSize{
+  width: 330px ;
+  height: 200px;
+}
+.background{
+  display:flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  height: 450px;
+  width: 100%;
+}
+.cont{
+  margin-left:20px;
+}
 
 @keyframes App-logo-spin {
   from {
