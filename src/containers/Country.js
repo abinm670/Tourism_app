@@ -30,7 +30,7 @@ class Country extends Component {
         .then(response=>{
         // console.log(response.data) 
      
-     for(let i=0;i<response.data.length;i++){
+     for(let i=0;i<7;i++){
        this.setState({fm1: this.state.fm1.concat(response.data[i]) })
        this.setState({s: this.state.country.concat(response.data[i].alpha2Code) })
        this.setState({country: this.state.country.concat(response.data[i].name) })
