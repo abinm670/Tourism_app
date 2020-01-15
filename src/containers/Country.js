@@ -30,7 +30,11 @@ class Country extends Component {
         .then(response=>{
         // console.log(response.data) 
      
-     for(let i=0;i<7;i++){
+
+    
+
+     for(let i=0;i<20;i++){
+
        this.setState({fm1: this.state.fm1.concat(response.data[i]) })
        this.setState({s: this.state.country.concat(response.data[i].alpha2Code) })
        this.setState({country: this.state.country.concat(response.data[i].name) })
@@ -55,13 +59,8 @@ class Country extends Component {
                   className="card-img-top flagSize" alt="..." /></Link>
                 <div className="card-body">
 
-                  <h4 className="card-title">{item.name}</h4>
-
-                  <h5 className="card-title">{item.name}</h5>
-                  <h5 className="card-title">{item.alpha2Code}</h5>
-
-
-                
+                  <h3 className="card-title">{item.name}</h3>
+            
                 </div>
               </div>
               </div>
@@ -78,8 +77,8 @@ class Country extends Component {
               
     )}   
     
+          
           }
-  
 
 
 export default Country;
