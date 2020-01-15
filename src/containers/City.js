@@ -101,6 +101,9 @@ console.log(this.props.match.params.id)
   { 
     return(
     <div> 
+      <br/>
+                    <br/>
+                    <br/>
 <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
                 
                     <br/>
