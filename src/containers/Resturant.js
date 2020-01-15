@@ -15,9 +15,9 @@ import {
           description:[],
           img:[],
           rate:[],
-          cityIdR: this.props.cityIdResturant
+          cityIdR: this.props.match.params.id
         }
-        console.log(this.props.cityIdResturant+"this.props.cityIdResturant")
+        console.log(this.props.match.params.id+"this.props.cityIdResturant")
     }
 componentDidMount(){
 const axios = require("axios");
@@ -28,7 +28,7 @@ axios({
     "headers":{
     "content-type":"application/octet-stream",
     "x-rapidapi-host":"tripadvisor1.p.rapidapi.com",
-    "x-rapidapi-key":"62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
+    "x-rapidapi-key":"512d823b2cmsh91ce58230ff3341p167b1cjsnb3f37af99e5b"
     },"params":{
     "restaurant_tagcategory_standalone":"10591",
     "lunit":"km",
@@ -38,7 +38,7 @@ axios({
     "restaurant_mealtype":"10598%2C10599",
     "currency":"USD",
     "lang":"en_US",
-    "location_id":"186338"
+    "location_id":`${this.props.match.params.id}`
     // `${this.props.cityIdResturant}`
     }
     })
@@ -69,6 +69,8 @@ axios({
     })
 }
 render(){
+  console.log('Rest'+this.state.cityIdR)
+
     return(
         <div>
           {this.DisplayRest()} 
@@ -82,10 +84,6 @@ render(){
 
 }
 DisplayRest(){
-  // if(this.state.name[index]=="undefined"||this.state.website[index]=="undefined"){
-  //     continue
-  // }
-  // else{
       return(
           <div>
           
@@ -100,10 +98,6 @@ DisplayRest(){
           ))}
           
           </div>)
- // }
-  
-      
- // }
 }
 }
 

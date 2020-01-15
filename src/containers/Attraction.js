@@ -12,15 +12,13 @@ import {
         super(props);
         this.state={
             landmark: [], 
-         name:[],
-        website:[],
-         img:[],
-          cityIdR: this.props.cityIdAttraction
+            name:[],
+            website:[],
+            img:[],
+            cityIdA: this.props.match.params.ids
         }
-       // console.log(this.props.cityIdAttraction+"this.props.cityIdAttraction")
     }
 
-    
 componentDidMount(){
 const axios = require("axios");
 
@@ -30,7 +28,7 @@ axios({
     "headers":{
     "content-type":"application/octet-stream",
     "x-rapidapi-host":"tripadvisor1.p.rapidapi.com",
-    "x-rapidapi-key":"62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
+    "x-rapidapi-key":"512d823b2cmsh91ce58230ff3341p167b1cjsnb3f37af99e5b"
     },"params":{
     "lang":"en_US",
     "currency":"USD",
@@ -39,19 +37,17 @@ axios({
     "limit":"30",
     "bookable_first":"false",
     "subcategory":"36",
-    "location_id":"186338"
+    "location_id":`${this.props.match.params.id}`
         // `${this.props.cityIdAttraction}`
-
     }
     })
     .then((response)=>{
         console.log("i am in then")
-        console.log(response)
       for(let i in response.data.data){
           console.log("i am in for")
-           this.setState({name: this.state.name.concat(response.data.data[i].name)})
+            this.setState({name: this.state.name.concat(response.data.data[i].name)})
             this.setState({website: this.state.website.concat(response.data.data[i].website)})
-           this.setState({img: this.state.img.concat(response.data.data[i].photo.images.small.url)} )
+            this.setState({img: this.state.img.concat(response.data.data[i].photo.images.small.url)} )
     
         //  this.setState(prev=>{
         //     prev.landmark.concat({
@@ -95,7 +91,7 @@ axios({
 }
 
 render(){
-    
+    console.log('Attraction'+this.state.cityIdA)
     return(
         <div>
             <div>
