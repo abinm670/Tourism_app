@@ -5,24 +5,23 @@ import GetCityInfo from './GetCityInfo';
 import Resturant from './Resturant'
 import {
 
-  BrowserRouter as Router,
-  Route,
-  Link
-} 
-from 'react-router-dom';
-//const citiesId=["1","2"]
+    BrowserRouter as Router,
+    Route,
+    Link
+  } from 'react-router-dom';
+
 export default class City extends React.Component {
-  constructor(props) {
-    super(props)
-    console.log(this.props.match.params.id)
-    this.state = {
-      alpha: this.props.alphaCode,
-      cities: [],
-      citiesId: [],
-      citiesName: [],
-      img: [],
-      citiesName2: "",
-      imgs: []
+    constructor(props){
+        super(props)
+console.log(this.props.match.params.id)
+  this.state = {
+    alpha: this.props.alphaCode,
+    cities: [],
+    citiesId:[],
+    citiesName:[],
+    img:[],
+    citiesName2:""
+
     }
   }
 
@@ -98,30 +97,16 @@ export default class City extends React.Component {
       </div>)
   }
 
-
-
-
-
-
-  render() {
-    
-    return (
-            
-         <Router> 
-
-           <div className="cont">
-                <div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                </div>
-    <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
-                <div>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                </div>
-          
+  render()
+  { 
+    return(
+    <div> 
+<h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
+                
+                    <br/>
+                    <br/>
+                    <br/>
+                        
            <div className="row row-cols-3 row-cols-md-2">
            
               {/* <Link to="/Time">Time</Link>{" "} */}
@@ -145,11 +130,16 @@ export default class City extends React.Component {
                </div> 
                </div> 
            )}
-        </div>
-          </div>
-      </Router>
         
-      )
- }
- }
+        </div>
 
+
+
+
+
+
+        </div> 
+
+    )}
+        
+}
