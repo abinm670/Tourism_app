@@ -55,7 +55,22 @@ console.log(res)
     return (
             
          <Router> 
+
+           <div className="cont">
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
+    <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
+                <div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                </div>
+          
            <div className="row row-cols-3 row-cols-md-2">
+           
               {/* <Link to="/Time">Time</Link>{" "} */}
            {/* <Link to="/GetCityInfo">GetCityInfo</Link>{" "} */}
            {/* <Link to="/Time">Time</Link> */}
@@ -73,7 +88,7 @@ console.log(res)
                </div> 
                </div> 
            )}
-
+        </div>
           </div>
       </Router>
         

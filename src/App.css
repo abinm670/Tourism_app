@@ -46,6 +46,9 @@
   height: 500px;
   width: 100%;
 }
+.cont{
+  margin-left:20px;
+}
 
 @keyframes App-logo-spin {
   from {
