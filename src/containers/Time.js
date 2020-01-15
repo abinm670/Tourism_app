@@ -13,21 +13,15 @@ import {
       super(props);
       this.state={ 
         time:"",
-        cityIdT: this.props.cityIdTime,
       }
       
       }
 componentDidMount(){
-    // const timeEls = (
-    //     props.cityId.map((el, index) => {
-    //       return <li key={index}>{el}</li>
-    //     })
-    //   )
-    //   console.log({timeEls}+"props");
+    console.log(this.props.match.params.id)
 
 axios({
     "method":"GET",
-    "url":"https://wft-geo-db.p.rapidapi.com/v1/geo/cities/"+`${this.props.cityIdTime}`+"/time",
+    "url":"https://wft-geo-db.p.rapidapi.com/v1/geo/cities/"+`${this.props.match.params.id}`+"/time",
     "headers":{
     "content-type":"application/octet-stream",
     "x-rapidapi-host":"wft-geo-db.p.rapidapi.com",
@@ -35,11 +29,9 @@ axios({
     }
     })
     .then((response)=>{
-      console.log(response.headers.date)
       this.setState({   
-        time:response.headers.date
+        time:response.data.data
       });
-      console.log(this.props.cityIdTime+" this.props.cityId")
 
     })
     .catch((error)=>{
@@ -49,7 +41,7 @@ axios({
 render(){
   return(
     <div>
-          <br></br> 
+        <br></br> 
         <br></br>
         <br></br>
         <br></br>
@@ -59,7 +51,5 @@ render(){
 
     );
 }
-    
-
 }
 export default Time;
