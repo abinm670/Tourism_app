@@ -88,9 +88,20 @@ render(){
   console.log(this.state.cityId+"this.state.cityId")
   console.log(this.state.cityName+"this.state.cityName")
   return(
-    
     <div>
-
+    <div>
+    <br></br>
+    <br></br>
+    <br></br>
+  </div>
+  <h2 className="text-center">  City Information </h2>
+  <div>
+    <br></br>
+    <br></br>
+    <br></br>
+  </div>
+    <div className="row">
+       
             <div className="container card">
             <Link to={"/Resturant/" +  this.state.cityId }><img src={this.state.backgroundImageR} className="card-img-top" alt="..." width="210px"height="210px"/></Link>
               <div className="card-body">
@@ -108,7 +119,12 @@ render(){
     {/* <Link to={"/Resturant/" +  this.state.cityId }>Resturant</Link> */}
     {/* <Link to={"/Attraction/" +  this.state.cityId}>Attraction</Link> */}
     </div>
-
+    <div>
+    <br></br>
+    <br></br>
+    <br></br>
+  </div>
+    </div>
     );
 }
 

@@ -114,16 +114,29 @@ DisplayAttrac(){
     // }
     // else{
         return(
+            <div >
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+        <h2 className="text-center">  Attraction </h2>
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
         <div className="row row-cols-3 row-cols-md-2">
                 { this.state.name.map((n, index) => (
                     <div className="col mb-4">
                     <div className="card">
                     <img className="card-img-top flagSize" src={this.state.img[index]}  alt="..." />
                     <h3>{this.state.name[index]}</h3>
-                    <h3>{this.state.website[index]}</h3>
+                    <h5>Attraction website : {this.state.website[index]}</h5>
                     </div>
             </div>
             ))}            
+        </div>
         </div>
         )
    

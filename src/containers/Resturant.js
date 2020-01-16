@@ -85,17 +85,30 @@ render(){
 }
 DisplayRest(){
       return(
+        <div>
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
+        <h2 className="text-center">  Resturant </h2>
+        <div>
+          <br></br>
+          <br></br>
+          <br></br>
+        </div>
         <div className="row row-cols-3 row-cols-md-2">
               { this.state.name.map((n, index) => (
                   <div className="col mb-4">
-                  <div className="card">
+                  <div >
                   <img className="card-img-top flagSize" src={this.state.img[index]}  alt="..." />
                   <h3>{this.state.name[index]}</h3>
                   <p>{this.state.rate[index]}</p>
-                  <h3>{this.state.description[index]}</h3>
+                  <h5>Resturant description : </h5><p>{this.state.description[index]}</p>
                   </div>
             </div>
           ))}
+          </div>
           </div>
       )
 }
