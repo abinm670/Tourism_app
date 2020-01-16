@@ -34,7 +34,7 @@ class Newspapers  extends Component {
 <h5 className="card-title">  {item.title} </h5>  
 <p className="card-text">  {item.name}  </p>   
 {/* <p className="card-text"> {item.description} </p>  */}
-<p > <a href={item.url}>{item.author}</a> </p>
+<p> <a href={item.url}>{item.author}</a> </p>
 </div>
 </div>        
  
