@@ -39,6 +39,13 @@ This website will be able to give you a nice tour and gerate idea of each countr
 - [x]  AboutUs
 - [x]  ContactUs
 
+## Future plans:
+- [x]  Write a test code. 
+- [x]  Create a backend to do the loging page.  
+- [x]  Add search to display specific region-country-city
+- [x]  Retrive data from our own server  
+
+
 ## Created by Golden Developers ..
 - Abdullah Binmahfouz.
 - Hanin Nouh.
