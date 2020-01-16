@@ -22,7 +22,7 @@ This website will be able to give you a nice tour and gerate idea of each countr
 ## Development Process and problem-solving strategy:
 - [x] Used waterfall methodology to build this app 
 - [x] Build a react app and a router.
-- [x] Run a local server using node.js.(Axios)
+- [x] Run a local server using node.js.
 - [x] Retrive data form five different APIs and local data. 
 - [x] Passing data through components and router
 - [x] Passing data from one API to another API.
