@@ -16,7 +16,8 @@ class Country extends Component {
       country: [],
       s: [],
       flag1: [],
-      fm1: []
+      fm1: [],
+      x:""
     }
   }
   componentDidMount() {
@@ -30,17 +31,24 @@ class Country extends Component {
           this.setState({ country: this.state.country.concat(response.data[i].name) })
           this.setState({ flag1: this.state.flag1.concat(response.data[i].flag) })
         }
+        
+        this.setState({ x:document.getElementById("searchForCountry").value})
+
       });
   }
   render() {
     const a2 = this.state.country.alpha2Code;
-    console.log(this.state.data)
+    console.log(this.state.x)
     return (
       <div className="cont">
         <div>
           <br></br>
           <br></br>
           <br></br>
+         {/* <h3> What Region? <input id="searchForCountry" /><br /><br /></h3>
+         
+         < Link to={"/Region/"+this.state.x}><button>Search For Country in Region</button></Link> */}
+
         </div>
         <h2 className="text-center">  COUNTIRES </h2>
         <div>
@@ -65,6 +73,7 @@ class Country extends Component {
       </div>
     )
   }
+
 }
 
 export default Country;

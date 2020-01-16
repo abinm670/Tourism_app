@@ -13,6 +13,7 @@ import GetCityInfo from './containers/GetCityInfo';
 import Resturant from './containers/Resturant';
 import Attraction from './containers/Attraction';
 import Weather from './containers/Weather';
+// import Region from './containers/Region';
 
 import React, { Component } from 'react';
 import {
@@ -41,6 +42,7 @@ class App extends Component {
           <Route path="/Resturant/:id"  exact component={Resturant}/>
           <Route path="/Attraction/:id"  exact component={Attraction}/>  
           <Route path="/Weather/:id/:id2"  exact component={Weather}/>  
+          {/* <Route path="/Region/:id"  exact component={Region}/>   */}
           <FooterBar />
           </Router>
           </div>
