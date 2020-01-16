@@ -42,7 +42,7 @@ console.log(this.props.match.params.id)
     })
       .then(res => {
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < res.data.data.length; i++) {
           this.setState({ cities: this.state.cities.concat(res.data.data[i]) })
           this.setState({ citiesId: this.state.citiesId.concat(res.data.data[i].id) })
           this.setState({ citiesName: this.state.citiesName.concat(res.data.data[i].name) })
@@ -99,8 +99,12 @@ console.log(this.props.match.params.id)
 
   render()
   { 
+    console.log(this.state.img)
     return(
     <div> 
+      <br/>
+                    <br/>
+                    <br/>
 <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
                 
                     <br/>

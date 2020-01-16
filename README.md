@@ -13,23 +13,20 @@ This website will be able to give you a nice tour and gerate idea of each countr
 - [x] AXIOS
 - [x] CSS
 - [x] GitHub
+- [x] Json File(local database)
 ### wireframes :
 :point_right: Watch it 
 <br><br>
 <img src="https://github.com/KOSaber/Pro3_test2/blob/khadijah/img/wireframe.jpg" width="350" height="450">
 <br>
 ## Development Process and problem-solving strategy:
-- [x]  props
-- [x]  state
-- [x]  setstate
-- [x]  loops
-- [x]  route
-- [x]  axios
-- [x]  selectores
-- [x]  imports
-- [x]  links
-- [x]  HTML
-- [x]  CSS
+- [x] Used waterfall methodology to build this app 
+- [x] Build a react app and a router.
+- [x] Run a local server using node.js.
+- [x] Retrive data form five different APIs and local data. 
+- [x] Passing data through components and router
+- [x] Passing data from one API to another API.
+- [x] Manpulating data and custmizing data
 ## Website Features components:
 - [x]  Home
 - [x]  Country
@@ -41,12 +38,14 @@ This website will be able to give you a nice tour and gerate idea of each countr
 - [x]  Time
 - [x]  AboutUs
 - [x]  ContactUs
+
 ## Future plans:
-- [x]   Add a functionality where the user is able to borrow books from the website.
-- [x]  Count each book the user borrowed and did not return.
-- [x]  Calculate the borrwing time of the book for each user.
-- [x]  Change book status to unavailabe if borrowed.
-- [x]  See if the user borrowed the book or added it.
+- [x]  Write a test code. 
+- [x]  Create a backend to do the loging page.  
+- [x]  Add search to display specific region-country-city
+- [x]  Retrive data from our own server  
+
+
 ## Created by Golden Developers ..
 - Abdullah Binmahfouz.
 - Hanin Nouh.

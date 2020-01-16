@@ -12,8 +12,14 @@ import Time from './containers/Time.js';
 import GetCityInfo from './containers/GetCityInfo';
 import Resturant from './containers/Resturant';
 import Attraction from './containers/Attraction';
+
+import Newspapers from './containers/Newspapers.js';
+import Newsdata from '../src/Database/Newsdata.js';
+
+
 import Weather from './containers/Weather';
 // import Region from './containers/Region';
+
 
 import React, { Component } from 'react';
 import {
@@ -27,6 +33,7 @@ import {
 class App extends Component {
 
   render() {
+   
     return (
       <div>
         <Router>
@@ -43,6 +50,10 @@ class App extends Component {
           <Route path="/Attraction/:id"  exact component={Attraction}/>  
           <Route path="/Weather/:id/:id2"  exact component={Weather}/>  
           {/* <Route path="/Region/:id"  exact component={Region}/>   */}
+
+          <Route path="/Weather/:id1/:id2"  exact component={Weather}/>
+          <Route path="/newspapers"  exact component=  { () => <Newspapers Neews={Newsdata}/>}/>
+          
           <FooterBar />
           </Router>
           </div>

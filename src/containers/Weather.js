@@ -3,36 +3,55 @@ import axios from 'axios';
 
 class Weather extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={
+        this.state = {
             weather: 0
         }
     }
 
-componentDidMount(){
+    componentDidMount() {
 
-//weather 
-axios({
-    method: 'get',
-    url: 'http://api.openweathermap.org/data/2.5/weather?q='+`${this.props.match.params.id}`+','+`${this.props.match.params.id2}`+'&APPID=544b1439e50b5d500d96cb18b849d3c2'
-    // url: 'http://api.openweathermap.org/data/2.5/weather?q=Jeddah,SA&APPID=544b1439e50b5d500d96cb18b849d3c2'
-}).then(response => {
-    console.log(response);
-    console.log(response.data.main.temp - 273.15);
-    this.setState({
-        weather: response.data.main.temp - 273.15
-    })
-}).catch(error => {
-    console.log(error);
-})
+        //weather 
 
-}
- 
+
+        axios({
+            "method": "GET",
+            "url": "https://community-open-weather-map.p.rapidapi.com/weather",
+            "headers": {
+                "content-type": "application/octet-stream",
+                "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
+                "x-rapidapi-key": "ace552dd9fmsha6ff55fdb781df9p18a94fjsna26d06dc2440"
+            }, "params": {
+                "callback": "test",
+                "id": "2172797",
+                "units": "%22metric%22 or %22imperial%22",
+                "mode": "xml%2C html",
+                "q": "Jeddah%2CSA"
+            }
+        })
+
+
+
+            .then(response => {
+                console.log("hello")
+                console.log(this.props.match.params.id);
+                console.log(response.data.main.temp - 273.15);
+                this.setState({
+                    weather: response.data.main.temp - 273.15
+                })
+            }).catch(error => {
+                console.log(error);
+            })
+
+    }
+
     render() {
         return (
             <div>
-                <h3>{this.state.weather}</h3> 
+                <h3>
+                    Hellloo hahah
+                    {this.state.weather}</h3>
             </div>
         );
     }

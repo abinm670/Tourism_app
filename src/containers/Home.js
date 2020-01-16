@@ -15,52 +15,7 @@ export default class Home extends Component {
           </div>
         </div>
         {/* Find Form */}
-        <div className="find">
-          {/* Image by https://unsplash.com/@garciasaldana_ */}
-          <div className="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8" />
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="find_title text-center">Find the Adventure of a lifetime</div>
-              </div>
-              <div className="col-12">
-                <div className="find_form_container">
-                  <form action="#" id="find_form" className="find_form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
-                    <div className="find_item">
-                      <div>Destination:</div>
-                      <input type="text" className="destination find_input" required="required" placeholder="Keyword here" />
-                    </div>
-                    <div className="find_item">
-                      <div>Adventure type:</div>
-                      <select name="adventure" id="adventure" className="dropdown_item_select find_input">
-                        <option>Categories</option>
-                        <option>Categories</option>
-                        <option>Categories</option>
-                      </select>
-                    </div>
-                    <div className="find_item">
-                      <div>Min price</div>
-                      <select name="min_price" id="min_price" className="dropdown_item_select find_input">
-                        <option>&nbsp;</option>
-                        <option>Price</option>
-                        <option>Price</option>
-                      </select>
-                    </div>
-                    <div className="find_item">
-                      <div>Max price</div>
-                      <select name="max_price" id="max_price" className="dropdown_item_select find_input">
-                        <option>&nbsp;</option>
-                        <option>Price</option>
-                        <option>Price</option>
-                      </select>
-                    </div>
-                    <button className="button find_button">Find</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         {/* Top Destinations */}
         <div className="top">
           <div className="container">
@@ -156,25 +111,7 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        {/* Video */}
-        <div className="video_section d-flex flex-column align-items-center justify-content-center">
-          {/* Image by https://unsplash.com/@peecho */}
-          <div className="video_background parallax-window" data-parallax="scroll" data-image-src="images/video.jpg" data-speed="0.8" />
-          <div className="video_content">
-            <div className="video_title">A day on the island</div>
-            <div className="video_subtitle">A trip organized by Destino's team</div>
-            <div className="video_play">
-              <a className="video" href="https://www.youtube.com/watch?v=BzMLA8YIgG0">
-                <svg version="1.1" id="Layer_1" className="play_button" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="140px" height="140px" viewBox="0 0 140 140" enableBackground="new 0 0 140 140" xmlSpace="preserve">
-                  <g id="Layer_2">
-                    <circle className="play_circle" fill="none" stroke="#FFFFFF" strokeWidth={2} strokeMiterlimit={10} cx="70.333" cy="69.58" r="68.542" />
-                    <polygon className="play_triangle" fill="none" stroke="#FFFFFF" strokeWidth={2} strokeMiterlimit={10} points="61.583,56 61.583,84.417 84.75,70 	" />
-                  </g>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+        
         {/* Popular */}
         <div className="popular">
           <div className="container">

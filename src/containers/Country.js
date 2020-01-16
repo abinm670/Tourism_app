@@ -17,14 +17,20 @@ class Country extends Component {
       s: [],
       flag1: [],
       fm1: [],
-      x:""
+      //x:""
     }
   }
   componentDidMount() {
     axios.get(`https://restcountries.eu/rest/v2`)
       .then(response => {
-        // response.data.length
-        for (let i = 0; i <50 ; i++) {
+
+
+
+        for (let i = 0; i < response.data.length; i++) {
+
+
+
+
 
           this.setState({ fm1: this.state.fm1.concat(response.data[i]) })
           this.setState({ s: this.state.country.concat(response.data[i].alpha2Code) })
@@ -32,7 +38,7 @@ class Country extends Component {
           this.setState({ flag1: this.state.flag1.concat(response.data[i].flag) })
         }
         
-        this.setState({ x:document.getElementById("searchForCountry").value})
+//        this.setState({ x:document.getElementById("searchForCountry").value})
 
       });
   }

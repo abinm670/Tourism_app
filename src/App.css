@@ -32,7 +32,7 @@
 }
 .card{
   width: 330px ;
-  height: 270px;
+  height: 300px;
 }
 .flagSize{
   width: 330px ;
@@ -49,6 +49,7 @@
 .cont{
   margin-left:20px;
 }
+
 
 @keyframes App-logo-spin {
   from {
