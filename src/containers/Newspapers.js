@@ -27,14 +27,16 @@ class Newspapers  extends Component {
   </div>   
 <div className="card mb-3 mr-2 ml-4 row">
   {this.props.Neews.articles.map(item=> (  
- <div className="card mr-2">   
+ <div className="card mr-2"> 
+ <a href={item.url}  >Read More</a>
   <img src={item.urlToImage} className="card-img-top" style={{width: "320px"}} height= "320px" alt='...' ></img>
       
   <div className="card-body">
 <h5 className="card-title">  {item.title} </h5>  
 <p className="card-text">  {item.name}  </p>   
 {/* <p className="card-text"> {item.description} </p>  */}
-<p> <a href={item.url}>{item.author}</a> </p>
+<p> {item.author}</p>
+
 </div>
 </div>        
  
