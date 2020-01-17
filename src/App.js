@@ -18,6 +18,7 @@ import Newsdata from '../src/Database/Newsdata.js';
 
 
 import Weather from './containers/Weather';
+// import Region from './containers/Region';
 
 
 import React, { Component } from 'react';
@@ -47,17 +48,12 @@ class App extends Component {
           <Route path="/GetCityInfo/:id"  exact component={GetCityInfo}/>
           <Route path="/Resturant/:id"  exact component={Resturant}/>
           <Route path="/Attraction/:id"  exact component={Attraction}/>  
+          <Route path="/Weather/:id/:id2"  exact component={Weather}/>  
+          {/* <Route path="/Region/:id"  exact component={Region}/>   */}
 
           <Route path="/Weather/:id,:id2"  exact component={Weather}/>
           <Route path="/newspapers"  exact component=  { () => <Newspapers Neews={Newsdata}/>}/>
           
-            
-
-
-           
-           
-
-
           <FooterBar />
           </Router>
           </div>
