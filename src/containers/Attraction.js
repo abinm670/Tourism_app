@@ -49,39 +49,7 @@ axios({
             this.setState({website: this.state.website.concat(response.data.data[i].website)})
             this.setState({img: this.state.img.concat(response.data.data[i].photo.images.small.url)} )
     
-        //  this.setState(prev=>{
-        //     prev.landmark.concat({
-        //          name: response.data.data[0].name,
-        //         //  website: response.data.data[i].website,
-        //        // img: response.data.data[i].photo.images.small.url
-        //     }
-        //     )
-        //  })  
       }
-
-      //samar
-    //   for(var i=0;i<response.data.data.length;i++){
-    //       console.log("I am in for")
-    //       this.setState(prevStat=>({
-    //           landmark:prevStat.landmark.push({
-    //               name: response.data.data[i].name,
-    //               website: response.data.data[i].website,
-    //               img: response.data.data[i].photo.images.small.url
-    //           })
-    //       }))
-    //}    
-
-    //abdullah
-    //     // this.setState({name: this.state.name.concat(response.data.data[i].name)})
-    //     // this.setState({website: this.state.website.concat(response.data.data[i].website)})
-    //     // this.setState({img: this.state.img.concat(response.data.data[i].photo.images.small.url)} )
-    // }
-
-    //   this.setState({ 
-    //     name:response.data.data[0].name,
-    //     website:response.data.data[0].website,
-    //     img:response.data.data[0].photo.images.small.url  
-    //   });
 
     })
     .catch((error)=>{
@@ -96,10 +64,6 @@ render(){
         <div>
             <div>
                {this.DisplayAttrac()} 
-                {/* <h3>{this.state.landmark[0].name}</h3> */}
-                 {/* <p>{this.state.name}</p>
-                <p>{this.state.website}</p>
-            <img src={this.state.img}  alt="..." /> */}
                 <br></br>
                 <br></br>
                 <br></br>
@@ -109,10 +73,6 @@ render(){
 
 }
 DisplayAttrac(){
-    // if(this.state.name[index]=="undefined"||this.state.website[index]=="undefined"){
-    //     continue
-    // }
-    // else{
         return(
             <div >
         <div>
@@ -132,7 +92,7 @@ DisplayAttrac(){
                     <div className="card">
                     <img className="card-img-top flagSize" src={this.state.img[index]}  alt="..." />
                     <h3>{this.state.name[index]}</h3>
-                    <h5>Attraction website : {this.state.website[index]}</h5>
+                    <a href={this.state.website[index]}>Attraction website</a>
                     </div>
             </div>
             ))}            

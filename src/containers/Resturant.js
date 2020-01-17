@@ -39,19 +39,10 @@ axios({
     "currency":"USD",
     "lang":"en_US",
     "location_id":`${this.props.match.params.id}`
-    // `${this.props.cityIdResturant}`
     }
     })
     .then((response)=>{
       console.log(response)
-      // console.log(response.data.data[0].name)
-      // console.log(response.data.data[0].description)
-      // console.log(response.data.data[0].photo.images.small)
-      // this.setState({ 
-      //   name:response.data.data[0].name,
-      //   description:response.data.data[0].description,
-      //   img:response.data.data[0].photo.images.small.url  
-      // });
       console.log("i am in then")
     for(let i in response.data.data){
         console.log("i am in for")
@@ -74,9 +65,6 @@ render(){
     return(
         <div>
           {this.DisplayRest()} 
-            {/* <h3>{this.state.name}</h3>
-            <p>{this.state.description}</p>
-            <img src={this.state.img}  alt="..." /> */}
           <br></br>
           <br></br>
         </div> 

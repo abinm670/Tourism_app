@@ -116,8 +116,6 @@ render(){
               </div>
             </div>
 
-    {/* <Link to={"/Resturant/" +  this.state.cityId }>Resturant</Link> */}
-    {/* <Link to={"/Attraction/" +  this.state.cityId}>Attraction</Link> */}
     </div>
     <div>
     <br></br>
