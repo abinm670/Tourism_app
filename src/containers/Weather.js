@@ -6,35 +6,27 @@ class Weather extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            weather: 0
+            weather: "",
+            i1:this.props.match.params.id,
+            i2:this.props.match.params.id2
         }
+
+        // console.log(this.props.match.params.id);
+        // console.log(this.props.match.params.id2);  
     }
 
     componentDidMount() {
 
         //weather 
-
-
         axios({
             "method": "GET",
-            "url": "https://community-open-weather-map.p.rapidapi.com/weather",
-            "headers": {
-                "content-type": "application/octet-stream",
-                "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com",
-                "x-rapidapi-key": "ace552dd9fmsha6ff55fdb781df9p18a94fjsna26d06dc2440"
-            }, "params": {
-                "callback": "test",
-                "id": "2172797",
-                "units": "%22metric%22 or %22imperial%22",
-                "mode": "xml%2C html",
-                "q": "Jeddah%2CSA"
-            }
+            "url": "http://api.openweathermap.org/data/2.5/weather?q="+this.state.i1+","+this.state.i2+"&APPID=095b6d34454b3e541cafb9bc26c3e48f",
+            
         })
 
 
 
             .then(response => {
-                console.log("hello")
                 console.log(this.props.match.params.id);
                 console.log(response.data.main.temp - 273.15);
                 this.setState({
@@ -42,15 +34,19 @@ class Weather extends Component {
                 })
             }).catch(error => {
                 console.log(error);
+                this.setState({
+                    weather:"city not found in this api"
+                })
             })
 
     }
 
     render() {
+        console.log(this.state.weather);
+
         return (
             <div>
                 <h3>
-                    Hellloo hahah
                     {this.state.weather}</h3>
             </div>
         );

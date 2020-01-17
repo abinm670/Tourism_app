@@ -48,7 +48,7 @@ class App extends Component {
           <Route path="/Resturant/:id"  exact component={Resturant}/>
           <Route path="/Attraction/:id"  exact component={Attraction}/>  
 
-          <Route path="/Weather/:id1/:id2"  exact component={Weather}/>
+          <Route path="/Weather/:id,:id2"  exact component={Weather}/>
           <Route path="/newspapers"  exact component=  { () => <Newspapers Neews={Newsdata}/>}/>
           
             

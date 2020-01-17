@@ -27,11 +27,6 @@ class Country extends Component {
 
 
         for (let i = 0; i < response.data.length; i++) {
-
-
-
-
-
           this.setState({ fm1: this.state.fm1.concat(response.data[i]) })
           this.setState({ s: this.state.country.concat(response.data[i].alpha2Code) })
           this.setState({ country: this.state.country.concat(response.data[i].name) })

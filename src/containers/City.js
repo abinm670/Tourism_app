@@ -55,90 +55,71 @@ console.log(this.props.match.params.id)
       })
     // var x =this.state.citiesName2; 
     // console.log(x);
-    for (let i = 0; i <= this.state.citiesName.length; i++) {
-      axios({
-        "method": "GET",
-        "url": "https://tripadvisor1.p.rapidapi.com/locations/search",
-        "headers": {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-          "x-rapidapi-key": "62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
-        }, "params": {
+    // for (let i = 0; i <= this.state.citiesName.length; i++) {
+    //   axios({
+    //     "method": "GET",
+    //     "url": "https://tripadvisor1.p.rapidapi.com/locations/search",
+    //     "headers": {
+    //       "content-type": "application/octet-stream",
+    //       "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
+    //       "x-rapidapi-key": "62e41a0607mshcef95c3b6c98e0bp1e76d1jsnf4fcca6a5b6a"
+    //     }, "params": {
 
-          "query": `${this.state.citiesName[i]}`
+    //       "query": `${this.state.citiesName[i]}`
 
-          ,
-          "lang": "en_US",
-          "units": "km",
+    //       ,
+    //       "lang": "en_US",
+    //       "units": "km",
 
-        }
-      })
-        .then((response) => {
-          console.log(this.state.citiesName[i])
+    //     }
+    //   })
+    //     .then((response) => {
+    //       console.log(this.state.citiesName[i])
 
-          this.setState({ img: this.state.img.concat(response.data.data[i].result_object.photo.images.small.url) })
+    //       this.setState({ img: this.state.img.concat(response.data.data[i].result_object.photo.images.small.url) })
 
-        })
-        .catch((error) => {
-          console.log(error)
+    //     })
+    //     .catch((error) => {
+    //       console.log(error)
 
-        })
-    }
+    //     })
+    // }
   }
 
-  DisplayRest() {
-    return (
-      <div>
-        {this.state.cities.map((n, index) => (
-          <div>
-            <img src={this.state.img[index]} alt="..." />
-          </div>
-        ))}
-      </div>)
-  }
+  // DisplayImg() {
+  //   return (
+  //     <div>
+  //       {this.state.cities.map((n, index) => (
+  //         <div>
+  //           <img src={this.state.img[index]} alt="..." />
+  //         </div>
+  //       ))}
+  //     </div>)
+  // }
 
   render()
   { 
     console.log(this.state.img)
     return(
     <div> 
-      <br/>
-                    <br/>
-                    <br/>
-<h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
-                
-                    <br/>
-                    <br/>
-                    <br/>
-                        
-        <div className="row row-cols-3 row-cols-md-2">
-           
-           {this.state.cities.map(city => 
-             <div className="col mb-4">
-              <div className="card" >
-              <h5 ><Link to ={"/Time/" + city.id}  >Time</Link> </h5>
-                    <h5><Link to ={"/Weather/" + city.name +','+this.state.alpha}  >Weather</Link> </h5>
-                <Link to={"/GetCityInfo/" +  city.name} >
-                   <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " 
-                   className="card-img-top flagSize" alt="..." /></Link> 
-                   <h3 className="card-title" >{city.name}</h3>
-                 {/* <Route path="/GetCityInfo"  component={() => <GetCityInfo cityName2={this.state.citiesName}/> }/>
-                 <Route path="/Time"  component={() => <Time cityIdTime={this.state.citiesId}/> }/> */}
-               {/* <Route path="/GetCityInfo" component={() => <GetCityInfo cityName2={this.state.citiesName} />} /> */}
-               
-               
+      <br/><br/><br/>
+      <h2 className="text-center"> {this.props.match.params.id} CITIES </h2>
+       <br/><br/><br/>    
+      <div className="row row-cols-3 row-cols-md-2">
+        {this.state.cities.map(city => 
+          <div className="col mb-4">
+            <div className="card" >
+            <h5 ><Link to ={"/Time/" + city.id}  >Time</Link> </h5>
+            <h5><Link to ={"/Weather/" + city.name +','+this.state.alpha}  >Weather</Link> </h5>
+            <Link to={"/GetCityInfo/" +  city.name} >
+              <img src="https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80 " 
+            className="card-img-top flagSize" alt="..." /></Link> 
+            <h3 className="card-title" >{city.name}</h3>
             </div> 
-        </div> 
-           )}
-        
-        </div>
-
-
-
-
-
-
-        </div> 
+          </div> 
+        )}  
+      </div>
+    </div> 
 
     )}
         
